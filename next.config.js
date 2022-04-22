@@ -1,6 +1,8 @@
-/** @type {import('next').NextConfig} */
+const withPlugins = require("next-compose-plugins");
+
 const nextConfig = {
   reactStrictMode: true,
-}
+  pageExtensions: ["js", "jsx", "ts", "tsx", "mdx", "md"],
+};
 
-module.exports = nextConfig
+module.exports = withPlugins([], nextConfig);
