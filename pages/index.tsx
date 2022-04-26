@@ -22,6 +22,39 @@ const HelloArray = [
   "Salam",
 ];
 
+const indexPageCards = [
+  {
+    name: "Tutorials",
+    href: "/tutorials",
+    copy: "Handy how-to's in the big dev world",
+  },
+  {
+    name: "Uses",
+    href: "/uses",
+    copy: "What theme, what font, what settings?!",
+  },
+  {
+    name: "Snippets",
+    href: "//twitter.com/charliesay_",
+    copy: "Handy little snippets for you to pop into your projects",
+  },
+  {
+    name: "Blog",
+    href: "/blog",
+    copy: "Read about some ramblings",
+  },
+  {
+    name: "Contact me",
+    href: "/contact",
+    copy: "Get in touch with me!",
+  },
+  {
+    name: "History",
+    href: "/history",
+    copy: "AKA My CV",
+  },
+];
+
 const Home: NextPage = () => {
   const [name, setName] = useState("");
   const shuffle = useCallback(() => {
@@ -45,32 +78,12 @@ const Home: NextPage = () => {
       <Code>(maybe minus some devops parts 😬)</Code>
 
       <Grid>
-        <Card href="/tutorials">
-          <CardH2>Tutorials &rarr;</CardH2>
-          <CardP>
-            Find in-depth information about Next.js features and API.
-          </CardP>
-        </Card>
-        <Card href="/uses">
-          <CardH2>Uses &rarr;</CardH2>
-          <CardP>What theme, what font, what settings?!</CardP>
-        </Card>
-        <Card href="/snippets">
-          <CardH2>Snippets &rarr;</CardH2>
-          <CardP>Handy little snippets for you to pop into your projects</CardP>
-        </Card>
-        <Card href="/blog">
-          <CardH2>Blog &rarr;</CardH2>
-          <CardP>Read about some ramblings</CardP>
-        </Card>
-        <Card href="/contact-me">
-          <CardH2>Contact &rarr;</CardH2>
-          <CardP>Get in touch with me!</CardP>
-        </Card>
-        <Card href="/history">
-          <CardH2>Work History &rarr;</CardH2>
-          <CardP>AKA My CV</CardP>
-        </Card>
+        {indexPageCards.map((card, i) => (
+          <Card key={i} href={card.href}>
+            <CardH2>{card.name} &rarr;</CardH2>
+            <CardP>{card.copy}</CardP>
+          </Card>
+        ))}
       </Grid>
     </Main>
   );

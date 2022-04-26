@@ -95,4 +95,9 @@ export const CardP = styled.p`
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
+
+  a {
+    color: blue;
+    font-weight: 800;
+  }
 `;

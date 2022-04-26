@@ -2,7 +2,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import Link from "next/link";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { Container, Footer } from "../styles/common.styles";
+import { Container, Footer, TitleH1 } from "../styles/common.styles";
 import { lightTheme, darkTheme } from "../styles/theme";
 
 const GlobalStyle = createGlobalStyle`
@@ -36,6 +36,9 @@ function MyApp({ Component, pageProps }: AppProps) {
             content="Im a full stack Java dev from Manchester UK"
           />
           <link rel="icon" href="/favicon.ico" />
+          <TitleH1>
+            <Link href="/">CHARLIE SAY</Link>
+          </TitleH1>
         </Head>
         <Component {...pageProps} />
         <Footer>

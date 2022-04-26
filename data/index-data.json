@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Tutorials",
+    "href": "/tutorials",
+    "copy": "Handy how-to's in the big dev world"
+  },
+  {
+    "name": "Uses",
+    "href": "/uses",
+    "copy": "What theme, what font, what settings?!"
+  },
+  {
+    "name": "Snippets",
+    "href": "//twitter.com/charliesay_",
+    "copy": "Handy little snippets for you to pop into your projects"
+  },
+  {
+    "name": "Blog",
+    "href": "/blog",
+    "copy": "Read about some ramblings"
+  },
+  {
+    "name": "Contact me",
+    "href": "/contact",
+    "copy": "Get in touch with me!"
+  },
+  {
+    "name": "History",
+    "href": "/history",
+    "copy": "AKA My CV"
+  }
+]
