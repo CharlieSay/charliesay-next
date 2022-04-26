@@ -2,8 +2,10 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import Link from "next/link";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { Container, Footer, TitleH1 } from "../styles/common.styles";
-import { lightTheme, darkTheme } from "../styles/theme";
+import { Footer } from "../styles/common.styles";
+import { ContainerConstrained } from "../styles/containers.styles";
+import { DesktopHeader } from "../styles/header";
+import { lightTheme } from "../styles/theme";
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -24,9 +26,78 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const header = [
+  {
+    displayText: "Uses",
+    url: "/uses",
+    subHeaders: [
+      {
+        displayText: "Worship loops",
+        url: "/search?category=worship_loops",
+      },
+      {
+        displayText: "Social graphics",
+        url: "/search?category=social_graphics",
+      },
+      {
+        displayText: "Countdowns",
+        url: "/search?category=countdowns",
+      },
+      {
+        displayText: "Sermon graphics",
+        url: "/search?category=sermon_graphics",
+      },
+      {
+        displayText: "Lyric videos",
+        url: "/search?category=lyric_videos",
+      },
+      {
+        displayText: "Stock Footage",
+        url: "/search?category=stock",
+      },
+    ],
+  },
+  {
+    displayText: "Blog",
+    url: "/blog",
+    subHeaders: [
+      {
+        displayText: "About us",
+        url: "/about-us",
+      },
+      {
+        displayText: "The team",
+        url: "/the-team",
+      },
+      {
+        displayText: "Blog",
+        url: "//dev.to/charliesay",
+      },
+    ],
+  },
+  {
+    displayText: "Contact",
+    url: "/contact",
+    subHeaders: [
+      {
+        displayText: "FAQ's",
+        url: "/help",
+      },
+      {
+        displayText: "Contact us",
+        url: "/help#contact-us",
+      },
+      {
+        displayText: "Instagram",
+        url: "//www.instagram.com/newvision.uk",
+      },
+    ],
+  },
+];
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Container>
+    <>
       <GlobalStyle />
       <ThemeProvider theme={lightTheme}>
         <Head>
@@ -36,18 +107,18 @@ function MyApp({ Component, pageProps }: AppProps) {
             content="Im a full stack Java dev from Manchester UK"
           />
           <link rel="icon" href="/favicon.ico" />
-          <TitleH1>
-            <Link href="/">CHARLIE SAY</Link>
-          </TitleH1>
         </Head>
-        <Component {...pageProps} />
+        <DesktopHeader headerLinks={header} />
+        <ContainerConstrained>
+          <Component {...pageProps} />
+        </ContainerConstrained>
         <Footer>
           <Link href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app">
-            Powered by Next JS & Big Brains
+            Powered by Next JS
           </Link>
         </Footer>
       </ThemeProvider>
-    </Container>
+    </>
   );
 }
 

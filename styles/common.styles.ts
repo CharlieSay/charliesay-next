@@ -4,6 +4,10 @@ export const Container = styled.div`
   padding: 0 2rem;
 `;
 
+export const LinkBlue = styled.p`
+  color: #0070f3;
+`;
+
 export const Main = styled.main`
   min-height: 100vh;
   padding: 4rem 0;
@@ -48,7 +52,7 @@ export const TitleH1 = styled.h1`
 
 export const Description = styled.p`
   text-align: center;
-  margin: 4rem 0 1rem 0;
+  margin: 2rem 0 1rem 0;
   font-size: 1.5rem;
 `;
 
@@ -83,7 +87,7 @@ export const Card = styled.a`
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   min-height: 185px;
   border-radius: 10px;
-  max-width: 300px;
+  width: 300px;
 `;
 
 export const CardH2 = styled.h2`

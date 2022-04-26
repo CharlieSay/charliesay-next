@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
-import { TitleH1, CardP } from "../styles/common.styles";
+import Link from "next/link";
+import { TitleH1, CardP, LinkBlue } from "../styles/common.styles";
 
 const Uses: NextPage = () => {
   return (
@@ -7,9 +8,22 @@ const Uses: NextPage = () => {
       <TitleH1>Uses</TitleH1>
       <CardP>
         This may be out of date, but you can always find out what loads of other
-        developers use over at <a href={"//uses.tech"}>uses.tech</a>
+        developers use over at
+        <LinkBlue>
+          <a href={"https://www.uses.tech"}> uses.tech</a>
+        </LinkBlue>
       </CardP>
-      <TitleH1>Editors</TitleH1>
+      <CardP>
+        If you&apos;re also looking for configs like VS Code and Intellij they
+        can be found in my
+        <LinkBlue>
+          <a href="https://www.github.com/CharlieSay/config-repo">
+            {" "}
+            config repo
+          </a>
+        </LinkBlue>
+      </CardP>
+      <TitleH1>Editors (IDEs)</TitleH1>
       <CardP>IntelliJ Ultimate, Visual Studio Code</CardP>
       <TitleH1>Apps</TitleH1>
       <CardP>ToDoist, Notion, Slack</CardP>

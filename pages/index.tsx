@@ -56,7 +56,7 @@ const indexPageCards = [
 ];
 
 const Home: NextPage = () => {
-  const [name, setName] = useState("");
+  const [name, setName] = useState(HelloArray[0]);
   const shuffle = useCallback(() => {
     const index = Math.floor(Math.random() * HelloArray.length);
     setName(HelloArray[index]);
@@ -69,9 +69,9 @@ const Home: NextPage = () => {
 
   return (
     <Main>
-      <TitleH1>{name} 👋</TitleH1>
+      <TitleH1>{name}</TitleH1>
       <TitleH1>
-        I&apos;m <Link href="/">Charlie Say.</Link>
+        I&apos;m <Link href="/">Charlie Say 👋</Link>
       </TitleH1>
 
       <Description>I&apos;m a full-stack dev from Manchester, UK</Description>
