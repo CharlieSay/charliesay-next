@@ -4,7 +4,7 @@ import Link from "next/link";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { Footer } from "../styles/common.styles";
 import { ContainerConstrained } from "../styles/containers.styles";
-import { DesktopHeader } from "../styles/header";
+import WebHeader from "../styles/header";
 import { lightTheme } from "../styles/theme";
 
 const GlobalStyle = createGlobalStyle`
@@ -108,7 +108,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <DesktopHeader headerLinks={header} />
+        <WebHeader headerLinks={header} />
         <ContainerConstrained>
           <Component {...pageProps} />
         </ContainerConstrained>

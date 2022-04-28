@@ -67,16 +67,30 @@ export const Logo = styled.a`
   }
 `;
 
-export const HeaderContainer = styled.div`
-  height: 60px;
-  display: flex !important;
-  position: relative !important;
-  margin: 0 auto !important;
-  padding-left: 80px !important;
-  padding-right: 80px !important;
-  z-index: 1 !important;
+export const NavWrapper = styled.nav`
+  margin: 0 auto;
+  max-width: 1224px;
+`;
+
+export const HeaderGroup = styled.div`
+  align-items: center;
+  display: flex;
   justify-content: space-between;
+  position: relative;
+  z-index: 210;
+  padding: 16px 32px;
+
+  @media (max-width: ${dimensions.mobileMax}) {
+    flex-direction: column;
+    padding: 8px 8px;
+    justify-content: center;
+  }
+`;
+
+export const HeaderContainer = styled.div`
+  z-index: 1;
   max-width: ${dimensions.maxWidth};
+  margin: 0 auto !important;
 `;
 
 export const DropdownAccount = styled.div`
@@ -164,13 +178,15 @@ export const SubHeaderLinkAMobile = styled(SubHeaderLinkA)`
 export const Text = styled.h1<{ big: boolean }>`
   font-size: ${(props) => (props.big ? 3 : 1.5)}em;
   margin: 0;
-  padding-top: 20px;
 `;
 
 export const StyledLink = styled.a`
   text-transform: lowercase;
   text-decoration: none;
   color: black;
+  @media (max-width: ${dimensions.mobileMax}) {
+    margin: 8px 0 8px 0;
+  }
 `;
 
 export const Accent = styled.em`
@@ -204,8 +220,6 @@ export const MobileUL = styled.ul`
 
 export const Header = styled.header`
   background-color: ${colours.white};
-  align-items: center;
-  height: 100%;
 `;
 
 const slideInFromLeft = keyframes`
