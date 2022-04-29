@@ -2,7 +2,8 @@
   {
     "name": "Tutorials",
     "href": "/tutorials",
-    "copy": "Handy how-to's in the big dev world"
+    "copy": "Handy how-to's in the big dev world",
+    "external": false
   },
   {
     "name": "Uses",
@@ -12,7 +13,8 @@
   {
     "name": "Snippets",
     "href": "//twitter.com/charliesay_",
-    "copy": "Handy little snippets for you to pop into your projects"
+    "copy": "Handy little snippets for you to pop into your projects",
+    "external": true
   },
   {
     "name": "Blog",
@@ -20,13 +22,13 @@
     "copy": "Read about some ramblings"
   },
   {
-    "name": "Contact me",
-    "href": "/contact",
-    "copy": "Get in touch with me!"
-  },
-  {
     "name": "History",
     "href": "/history",
     "copy": "AKA My CV"
+  },
+  {
+    "name": "Contact",
+    "href": "/contact",
+    "copy": "Get in touch with me!"
   }
 ]

@@ -6,14 +6,14 @@ import { Footer } from "../styles/common.styles";
 import { ContainerConstrained } from "../styles/containers.styles";
 import WebHeader from "../styles/header";
 import { lightTheme } from "../styles/theme";
+import header from "../data/nav-data.json";
 
 const GlobalStyle = createGlobalStyle`
   html,
   body {
     padding: 0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
   }
 
   a {
@@ -26,82 +26,13 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const header = [
-  {
-    displayText: "Uses",
-    url: "/uses",
-    subHeaders: [
-      {
-        displayText: "Worship loops",
-        url: "/search?category=worship_loops",
-      },
-      {
-        displayText: "Social graphics",
-        url: "/search?category=social_graphics",
-      },
-      {
-        displayText: "Countdowns",
-        url: "/search?category=countdowns",
-      },
-      {
-        displayText: "Sermon graphics",
-        url: "/search?category=sermon_graphics",
-      },
-      {
-        displayText: "Lyric videos",
-        url: "/search?category=lyric_videos",
-      },
-      {
-        displayText: "Stock Footage",
-        url: "/search?category=stock",
-      },
-    ],
-  },
-  {
-    displayText: "Blog",
-    url: "/blog",
-    subHeaders: [
-      {
-        displayText: "About us",
-        url: "/about-us",
-      },
-      {
-        displayText: "The team",
-        url: "/the-team",
-      },
-      {
-        displayText: "Blog",
-        url: "//dev.to/charliesay",
-      },
-    ],
-  },
-  {
-    displayText: "Contact",
-    url: "/contact",
-    subHeaders: [
-      {
-        displayText: "FAQ's",
-        url: "/help",
-      },
-      {
-        displayText: "Contact us",
-        url: "/help#contact-us",
-      },
-      {
-        displayText: "Instagram",
-        url: "//www.instagram.com/newvision.uk",
-      },
-    ],
-  },
-];
-
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyle />
       <ThemeProvider theme={lightTheme}>
         <Head>
-          <title>Charlie Say</title>
+          <title>Charlie Say | Full-stack dev</title>
           <meta
             name="description"
             content="Im a full stack Java dev from Manchester UK"
@@ -113,9 +44,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </ContainerConstrained>
         <Footer>
-          <Link href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app">
-            Powered by Next JS
-          </Link>
+          <Link href="https://nextjs.org/">Powered by Next JS</Link>
         </Footer>
       </ThemeProvider>
     </>

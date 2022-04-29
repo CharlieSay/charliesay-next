@@ -208,6 +208,10 @@ export const UL = styled.ul`
   align-items: center;
   justify-content: flex-end;
   height: 100%;
+  @media (max-width: ${dimensions.mobileMax}) {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+  }
 `;
 
 export const MobileUL = styled.ul`
