@@ -9,9 +9,10 @@ const dimensions = {
 };
 
 export const NvContainer = styled.div`
-  display: block;
-  margin: 0 0 72px;
-  max-width: auto;
+  max-width: 640px;
+  padding: 0 16px;
+  margin: 0 auto;
+  box-sizing: border-box;
   position: relative;
 `;
 

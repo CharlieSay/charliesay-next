@@ -6,17 +6,16 @@ const ContactMe: NextPage = () => {
   return (
     <>
       <TitleH1>ContactMe</TitleH1>
-      <p>
-        <span>What fonts do you use?</span> head on over{" "}
+      <p style={{ display: "flex" }}>
+        <span>What fonts do you use? head on over </span>
         <LinkBlue>
           <Link href="/uses">here to find out </Link>
         </LinkBlue>
       </p>
-      <p>
-        <span>Want me to do some work?</span> drop me an
+      <p style={{ display: "flex" }}>
+        <span>Want me to do some work? drop me an </span>
         <LinkBlue>
           <a href="mailto:charlie@talesoft.digital?subject=Lets work together!">
-            {" "}
             email
           </a>
         </LinkBlue>

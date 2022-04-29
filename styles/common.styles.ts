@@ -6,6 +6,7 @@ export const Container = styled.div`
 
 export const LinkBlue = styled.p`
   color: #0070f3;
+  margin: 0;
 `;
 
 export const Main = styled.main`

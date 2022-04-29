@@ -11,9 +11,10 @@ import header from "../data/nav-data.json";
 const GlobalStyle = createGlobalStyle`
   html,
   body {
-    padding: 0;
-    margin: 0;
+    font-size: 18px;
     font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
   }
 
   a {
