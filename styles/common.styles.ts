@@ -51,6 +51,40 @@ export const TitleH1 = styled.h1`
   }
 `;
 
+export const Pill = styled.div`
+  z-index: 1;
+  padding: 7px 20px;
+  border: 1px solid hsla(0, 0%, 100%, 0.07);
+  border-radius: 12px;
+  background-color: #f2f2f2;
+  font-size: 11px;
+  line-height: 1em;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+`;
+
+export const PillBlur = styled(Pill)`
+  position: relative;
+  top: 10px;
+  border-radius: 10000000px;
+  background-image: linear-gradient(
+    270deg,
+    rgba(255, 56, 104, 0.5),
+    rgba(77, 84, 255, 0.5)
+  );
+  filter: blur(6px);
+`;
+
+export const TitleH2 = styled.h2`
+  text-decoration: none;
+  margin: 0;
+  line-height: 1.15;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #0070f3;
+`;
+
 export const Description = styled.p`
   text-align: center;
   margin: 2rem 0 1rem 0;

@@ -1,21 +1,37 @@
 import type { NextPage } from "next";
-import { TitleH1 } from "../styles/common.styles";
+import workHistory from "../data/work-history.json";
+import { Pill, PillBlur, TitleH1, TitleH2 } from "../styles/common.styles";
+import {
+  ExperienceHeroSection,
+  ExperienceList,
+  ExperienceUnique,
+} from "../styles/history.styles";
 
 const History: NextPage = () => {
   return (
     <>
-      <TitleH1> History</TitleH1>
-      <li style={{ listStyle: "none" }}>
-        <ul>ITV - Core Software Engineer - March 2022 - present</ul>
-        <ul>
-          MoneySuperMarket Group - Java Developer January 2021 - March 2022
-        </ul>
-        <ul>AutoTrader UK - Java Developer March 2019 - Jan 2021</ul>
-        <ul>
-          AutoTrader UK - Apprentice Java Developer - September 2017 - March
-          2019
-        </ul>
-      </li>
+      <TitleH1>History</TitleH1>
+      <ExperienceList>
+        {workHistory.map((experience) => (
+          <ExperienceUnique key={experience.title}>
+            <ExperienceHeroSection>
+              <TitleH2>{experience.company}</TitleH2>
+              <p>{experience.title}</p>
+            </ExperienceHeroSection>
+            <ExperienceList style={{ display: "flex" }}>
+              {experience.keywords.map((keyword) => (
+                <li key={keyword}>
+                  <Pill>{keyword}</Pill>
+                  <PillBlur />
+                </li>
+              ))}
+            </ExperienceList>
+            <p>
+              {experience.dateFrom} - {experience.dateTo}
+            </p>
+          </ExperienceUnique>
+        ))}
+      </ExperienceList>
     </>
   );
 };

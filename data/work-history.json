@@ -1,0 +1,62 @@
+[
+  {
+    "company": "ITV",
+    "title": "Core Software Engineer",
+    "website": "www.itv.co.uk",
+    "keywords": ["React", "Java", "Kotlin"],
+    "experience": [
+      "Leading front-end project on a new initiative to bring Digital Advertising (ITV Hub) in line with traditional advertising (Air Time Sales)",
+      "Scoping use of AWS Amplify (& various other AWS Services) for above project",
+      "Partaking in Lambda & Kotlin based backend work for above project."
+    ],
+    "dateFrom": "March 2022",
+    "dateTo": "Present"
+  },
+  {
+    "company": "Moneysupermarket Group",
+    "title": "Java Engineer (& Fullstack)",
+    "website": "https://www.moneysupermarket.com/",
+    "keywords": [
+      "React",
+      "Java",
+      "MongoDB",
+      "GraphQL",
+      "Jenkins",
+      "Spring",
+      "SpringBoot",
+      "Angular"
+    ],
+    "experience": [
+      "Assisting in migration of multiple services from Rightscale to Kubernetes.",
+      "Assisting migration from VPC Based ElasticSearch instances to AWS ElasticService clusters",
+      "Started the decoupling process of above monolith services into Microservices using Spring Boot (from Dropwizard).",
+      "Advocated and added GraphQL to a service resulting in 90% less JSON overhead",
+      "Onboarding providers into the Moneysupermarket Energy Platform to deliver applications via batch files & more recently API."
+    ],
+    "dateFrom": "Jan 2021",
+    "dateTo": "March 2022"
+  },
+  {
+    "company": "AutoTrader UK",
+    "title": "Junior Java Engineer",
+    "website": "https://www.autotrader.co.uk",
+    "keywords": [
+      "React",
+      "Java",
+      "Javascript",
+      "Typescript",
+      "GraphQL",
+      "Jenkins",
+      "Spring",
+      "SpringBoot",
+      "MySQL"
+    ],
+    "experience": [
+      "Updated an Advertiser API in which we allowed Car Dealers to show whether they are accredited with various car industry body awards. This change also improved API response time from 10s to 1.5s",
+      "Added a newsletter component (typescript react) using the GraphQL server wrapper on top of our spring boot platform. This lead to an increase in our marketable database inside Seligent.",
+      "Re-wrote legacy stock reporting system including an API, moving from talend to own platform utilising Spring (inc. Spring Boot), Hibernate, JOOQ, H2 & Flyway."
+    ],
+    "dateFrom": "Sep 2017",
+    "dateTo": "Jan 2021"
+  }
+]
