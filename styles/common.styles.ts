@@ -51,13 +51,17 @@ export const TitleH1 = styled.h1`
   }
 `;
 
+export const PillSection = styled.section`
+  margin-right: 16px;
+`;
+
 export const Pill = styled.div`
   z-index: 1;
   padding: 7px 20px;
   border: 1px solid hsla(0, 0%, 100%, 0.07);
   border-radius: 12px;
-  background-color: #f2f2f2;
-  font-size: 11px;
+  background-color: #f5f5f7;
+  font-size: 0.5em;
   line-height: 1em;
   font-weight: 700;
   letter-spacing: 0;
@@ -66,7 +70,7 @@ export const Pill = styled.div`
 
 export const PillBlur = styled(Pill)`
   position: relative;
-  top: 10px;
+  bottom: 20px;
   border-radius: 10000000px;
   background-image: linear-gradient(
     270deg,
@@ -74,6 +78,7 @@ export const PillBlur = styled(Pill)`
     rgba(77, 84, 255, 0.5)
   );
   filter: blur(6px);
+  z-index: -1;
 `;
 
 export const TitleH2 = styled.h2`
@@ -81,7 +86,7 @@ export const TitleH2 = styled.h2`
   margin: 0;
   line-height: 1.15;
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 800;
   color: #0070f3;
 `;
 
