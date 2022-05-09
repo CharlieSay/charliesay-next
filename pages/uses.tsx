@@ -1,11 +1,5 @@
 import type { NextPage } from "next";
-import {
-  TitleH1,
-  CardP,
-  LinkBlue,
-  Description,
-  TitleH2,
-} from "../styles/common.styles";
+import { TitleH1, Description, TitleH2 } from "../styles/common.styles";
 import { ALink } from "../styles/header.styles";
 
 const Uses: NextPage = () => {

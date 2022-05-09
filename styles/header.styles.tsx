@@ -72,6 +72,10 @@ export const ULLI = styled.li<{ mobileNav: boolean }>`
   }
 `;
 
+export const ThemeSwitchContainer = styled.section`
+  padding-left: 16px;
+`;
+
 export const HeaderLinkA = styled.a`
   color: ${(props) => props.theme.elements.headline};
   cursor: pointer;

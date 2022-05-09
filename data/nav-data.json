@@ -6,6 +6,12 @@
     "external": false
   },
   {
+    "name": "About",
+    "href": "/about",
+    "copy": "Handy how-to's in the big dev world",
+    "external": false
+  },
+  {
     "name": "Uses",
     "href": "/uses",
     "copy": "What theme, what font, what settings?!"

@@ -11,8 +11,7 @@ export const LinkBlue = styled.p`
 `;
 
 export const Main = styled.main`
-  min-height: 100vh;
-  padding: 4rem 0;
+  min-height: 60vh;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -48,6 +47,10 @@ export const TitleH1 = styled.h1`
       text-decoration: underline;
     }
   }
+`;
+
+export const TitleH1Center = styled(TitleH1)`
+  text-align: center;
 `;
 
 export const PillSection = styled.section`
@@ -86,6 +89,10 @@ export const TitleH2 = styled.h2`
   font-size: 2.5rem;
   font-weight: 800;
   color: ${(props) => props.theme.elements.headline};
+`;
+
+export const TitleH2Center = styled(TitleH2)`
+  text-align: center;
 `;
 
 export const Description = styled.p`
@@ -127,7 +134,11 @@ export const CardH2 = styled.h2`
 `;
 
 export const CardP = styled.p`
-  margin: 0;
   font-size: 1.25rem;
+  font-weight: 700;
   color: ${(props) => props.theme.elements.paragraph};
+`;
+
+export const TwitterFeedPadding = styled.section`
+  padding-top: 64px;
 `;

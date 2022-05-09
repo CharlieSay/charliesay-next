@@ -12,6 +12,7 @@ import {
   MobileMenuOverlay,
   MobileMenuOverlayContent,
   HamburgerMenuPadding,
+  ThemeSwitchContainer,
 } from "./header.styles";
 import { RoughNotation } from "react-rough-notation";
 import HamburgerMenu from "react-hamburger-menu";
@@ -50,7 +51,7 @@ const WebHeader = (props: HeaderPropsAsClass) => {
               height={15}
               strokeWidth={2}
               rotate={0}
-              color="#00473e"
+              color={isLightMode ? "#faae2b" : "#fffffe"}
               animationDuration={0.5}
             />
           </HamburgerMenuSection>
@@ -65,7 +66,7 @@ const WebHeader = (props: HeaderPropsAsClass) => {
                     height={15}
                     strokeWidth={3}
                     rotate={0}
-                    color="#faae2b"
+                    color={isLightMode ? "#faae2b" : "#fffffe"}
                   />
                 </HamburgerMenuPadding>
                 {headerLinks.map((link) => (
@@ -83,13 +84,17 @@ const WebHeader = (props: HeaderPropsAsClass) => {
               </MobileMenuOverlayContent>
             </MobileMenuOverlay>
           )}
-          <DarkModeSwitch
-            checked={isLightMode}
-            onChange={() => themeSwitchHook(!isLightMode)}
-            size={30}
-            moonColor={"#00473e"}
-            sunColor={"#fffffe"}
-          />
+          <ThemeSwitchContainer>
+            <DarkModeSwitch
+              checked={isLightMode}
+              onChange={() => {
+                themeSwitchHook(!isLightMode);
+              }}
+              size={30}
+              moonColor={"#00473e"}
+              sunColor={"#fffffe"}
+            />
+          </ThemeSwitchContainer>
         </HeaderGroup>
       </NavWrapper>
     </Header>

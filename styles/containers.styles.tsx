@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const dimensions = {
+export const dimensions = {
   maxWidth: "1200px",
   minWidth: "320px",
   contentWidth: "1024px",
