@@ -15,9 +15,10 @@ import {
 } from "./header.styles";
 import { RoughNotation } from "react-rough-notation";
 import HamburgerMenu from "react-hamburger-menu";
+import { DarkModeSwitch } from "react-toggle-dark-mode";
 
 const WebHeader = (props: HeaderPropsAsClass) => {
-  const { headerLinks } = props;
+  const { headerLinks, themeSwitchHook, isLightMode } = props;
   const [showNav, setShowNav] = useState(false);
 
   return (
@@ -82,6 +83,13 @@ const WebHeader = (props: HeaderPropsAsClass) => {
               </MobileMenuOverlayContent>
             </MobileMenuOverlay>
           )}
+          <DarkModeSwitch
+            checked={isLightMode}
+            onChange={() => themeSwitchHook(!isLightMode)}
+            size={30}
+            moonColor={"#00473e"}
+            sunColor={"#fffffe"}
+          />
         </HeaderGroup>
       </NavWrapper>
     </Header>
@@ -90,6 +98,8 @@ const WebHeader = (props: HeaderPropsAsClass) => {
 
 interface HeaderPropsAsClass {
   headerLinks: Array<HeaderLink>;
+  themeSwitchHook: React.Dispatch<React.SetStateAction<any>>;
+  isLightMode: boolean;
 }
 
 interface HeaderLink {

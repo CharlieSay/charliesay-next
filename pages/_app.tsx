@@ -8,9 +8,10 @@ import {
   ContainerConstrained,
 } from "../styles/containers.styles";
 import WebHeader from "../styles/header";
-import { lightTheme, ThemeType } from "../styles/theme.styles";
+import { darkTheme, lightTheme, ThemeType } from "../styles/theme.styles";
 import header from "../data/nav-data.json";
 import { HeaderLinkA } from "../styles/header.styles";
+import { useState } from "react";
 
 const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   @font-face {
@@ -40,9 +41,10 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 `;
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [lightMode, setLightMode] = useState(true);
   return (
     <>
-      <ThemeProvider theme={lightTheme}>
+      <ThemeProvider theme={lightMode ? lightTheme : darkTheme}>
         <GlobalStyle />
         <Head>
           <title>Charlie Say | Full-stack dev</title>
@@ -52,7 +54,11 @@ function MyApp({ Component, pageProps }: AppProps) {
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <WebHeader headerLinks={header} />
+        <WebHeader
+          isLightMode={lightMode}
+          themeSwitchHook={setLightMode}
+          headerLinks={header}
+        />
         <BackgroundColour>
           <ContainerConstrained>
             <Component {...pageProps} />

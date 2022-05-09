@@ -113,7 +113,7 @@ export const Card = styled.a`
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border: 1px solid #eaeaea;
+  border: 1px solid ${(props) => props.theme.elements.headline};
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   min-height: 185px;
   border-radius: 10px;
@@ -123,14 +123,11 @@ export const Card = styled.a`
 export const CardH2 = styled.h2`
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
+  color: ${(props) => props.theme.elements.headline};
 `;
 
 export const CardP = styled.p`
   margin: 0;
   font-size: 1.25rem;
-
-  a {
-    color: blue;
-    font-weight: 800;
-  }
+  color: ${(props) => props.theme.elements.paragraph};
 `;
