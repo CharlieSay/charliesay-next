@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import { useCallback, useEffect, useState } from "react";
 import {
-  CardP,
   Description,
   LinkBlue,
   Main,
@@ -43,12 +42,16 @@ const Home: NextPage = () => {
           <LinkBlue>I&apos;m Charlie Say</LinkBlue>
         </MiddleAlign>
       </TitleH1>
-      <RoughNotation color={"#faae2b"} type="box" show={true} padding={15}>
-        <Description>
-          I want to help you become the best you in the Software World.
-        </Description>
-      </RoughNotation>
-      <CardP>I&apos;m a full-stack dev from Manchester, UK 🐝</CardP>
+      <Description>
+        <RoughNotation
+          color={"#faae2b"}
+          type="highlight"
+          show={true}
+          padding={15}
+        >
+          I want to help you become the best you in the software space.
+        </RoughNotation>
+      </Description>
       <TwitterFeedPadding>
         <TwitterTimelineEmbed
           placeholder={<Skeleton count={5} height={400} width={300} />}
