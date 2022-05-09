@@ -5,8 +5,9 @@ export const Container = styled.div`
 `;
 
 export const LinkBlue = styled.p`
-  color: #0070f3;
+  color: ${(props) => props.theme.illustration.secondary};
   margin: 0;
+  text-decoration: none;
 `;
 
 export const Main = styled.main`
@@ -23,9 +24,9 @@ export const Footer = styled.footer`
   display: flex;
   flex: 1;
   padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
+  background-color: ${(props) => props.theme.elements.background};
 `;
 
 export const FooterLinkA = styled.a`
@@ -37,14 +38,12 @@ export const FooterLinkA = styled.a`
 
 export const TitleH1 = styled.h1`
   text-decoration: none;
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: ${(props) => props.theme.elements.headline};
 
   a {
-    color: #0070f3;
-
     &:hover {
       text-decoration: underline;
     }
@@ -52,18 +51,18 @@ export const TitleH1 = styled.h1`
 `;
 
 export const PillSection = styled.section`
-  margin-right: 16px;
+  margin-right: 8px;
 `;
 
 export const Pill = styled.div`
   z-index: 1;
-  padding: 7px 20px;
+  padding: 6px 20px;
   border: 1px solid hsla(0, 0%, 100%, 0.07);
   border-radius: 12px;
-  background-color: #f5f5f7;
+  background-color: ${(props) => props.theme.illustration.secondary};
+  color: ${(props) => props.theme.illustration.stroke};
   font-size: 0.5em;
-  line-height: 1em;
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: 0;
   text-transform: uppercase;
 `;
@@ -84,25 +83,16 @@ export const PillBlur = styled(Pill)`
 export const TitleH2 = styled.h2`
   text-decoration: none;
   margin: 0;
-  line-height: 1.15;
   font-size: 2.5rem;
   font-weight: 800;
-  color: #0070f3;
+  color: ${(props) => props.theme.elements.headline};
 `;
 
 export const Description = styled.p`
   text-align: center;
-  margin: 2rem 0 1rem 0;
-  font-size: 1.5rem;
-`;
-
-export const Code = styled.code`
-  background: #fafafa;
-  border-radius: 5px;
-  font-size: 0.8rem;
-  margin: 0rem 0 1rem 0;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: ${(props) => props.theme.elements.paragraph};
 `;
 
 export const Grid = styled.div`
@@ -138,7 +128,6 @@ export const CardH2 = styled.h2`
 export const CardP = styled.p`
   margin: 0;
   font-size: 1.25rem;
-  line-height: 1.5;
 
   a {
     color: blue;

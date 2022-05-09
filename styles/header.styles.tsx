@@ -1,18 +1,4 @@
-import styled, { keyframes } from "styled-components";
-
-const colours = {
-  black: "#000000",
-  white: "#ffffff",
-  whiteDark: "#f0f0f0",
-  whiteDarker: "#f4f1f1",
-  blackDisabled: "#727272",
-  beige: "#fff0e3",
-  mint: "#a4f5d3",
-  blue: "#003cd7",
-  disabledBlue: "#5477d1",
-  hoverBlue: "#0030ab",
-  purple: "#E5D4F7",
-};
+import styled from "styled-components";
 
 const dimensions = {
   maxWidth: "1200px",
@@ -22,54 +8,9 @@ const dimensions = {
   baseUnit: "8px",
 };
 
-export const FloatLeft = styled.div`
-  display: flex;
-  justify-content: flex-start;
-`;
-
-const ButtonBaseA = styled.a`
-  font-size: 14px;
-  font-weight: 600;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  display: inline-block;
-  position: relative;
-  box-sizing: border-box;
-  cursor: pointer;
-  width: auto;
-  padding: 11px 18px 10px;
-  height: 40px;
-  vertical-align: middle;
-  text-align: center;
-`;
-
-export const BlueCTABtn = styled(ButtonBaseA)`
-  color: ${colours.white};
-  background: ${colours.blue};
-  border-radius: 2px;
-  :hover {
-    background: ${colours.hoverBlue};
-    color: ${colours.white};
-  }
-`;
-
-export const Logo = styled.a`
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: "bold";
-  font-size: 24px;
-  margin: 0;
-  color: ${colours.black};
-  transition: 0.45s;
-  padding-top: 20px;
-  :hover {
-    color: ${colours.blue};
-  }
-`;
-
 export const NavWrapper = styled.nav`
   margin: 0 auto;
-  max-width: 1224px;
+  max-width: ${dimensions.maxWidth};
 `;
 
 export const HeaderGroup = styled.div`
@@ -81,123 +22,74 @@ export const HeaderGroup = styled.div`
   padding: 16px 32px;
 
   @media (max-width: ${dimensions.mobileMax}) {
-    flex-direction: column;
-    padding: 8px 8px;
-    justify-content: center;
-  }
-`;
-
-export const HeaderContainer = styled.div`
-  z-index: 1;
-  max-width: ${dimensions.maxWidth};
-  margin: 0 auto !important;
-`;
-
-export const DropdownAccount = styled.div`
-  display: none;
-  transition: 0.2s;
-`;
-
-export const AccountAreaBtn = styled(BlueCTABtn)`
-  :hover ${DropdownAccount} {
-    display: block;
-    background-color: white;
-    box-shadow: 0 1px 3px #aaa;
-    top: 40px;
-    padding: 8% 5% 8% 5%;
-    left: -40px;
-    overflow: hidden;
-    position: absolute;
-    min-width: 120px;
+    justify-content: space-around;
     width: 100%;
-    z-index: 2;
-    border-radius: 2px;
-    border-left-style: solid;
-    border-color: ${colours.blue};
-
-    a {
-      color: ${colours.black};
-
-      :hover {
-        color: ${colours.blue};
-      }
-    }
   }
 `;
 
-export const MobileHeaderContainer = styled.div`
-  width: 100%;
-  display: inline-flex;
-  position: relative !important;
-  padding: 10px 0 10px 0px;
-  z-index: 1 !important;
-  justify-content: space-between;
+export const HamburgerMenuSection = styled.section`
+  display: none;
+  @media (max-width: ${dimensions.mobileMax}) {
+    display: inline;
+  }
 `;
 
-export const ULLI = styled.li``;
+export const MobileMenuOverlay = styled.nav`
+  height: 100%;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: ${(props) =>
+    props.theme.elements.background}; /* Black fallback color */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s;
+`;
+
+export const MobileMenuOverlayContent = styled.section`
+  position: relative;
+  top: 10%;
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const HamburgerMenuPadding = styled.section`
+  justify-content: center;
+  display: flex;
+  padding-bottom: 32px;
+`;
+
+export const ULLI = styled.li<{ mobileNav: boolean }>`
+  display: ${(props) => (props.mobileNav ? "none" : "inline")};
+  @media (max-width: ${dimensions.mobileMax}) {
+    display: ${(props) => (props.mobileNav ? "inline" : "none")};
+    flex-direction: column;
+    height: 100%;
+  }
+`;
 
 export const HeaderLinkA = styled.a`
-  color: ${colours.black};
+  color: ${(props) => props.theme.elements.headline};
   cursor: pointer;
-  margin: 0 16px 0 16px;
-  transition: 0.1s;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  :hover {
-    color: ${colours.blue};
+  margin-left: 1.2rem;
+  font-weight: 700;
+  &:hover {
+    color: ${(props) => props.theme.elements.paragraph};
   }
 `;
 
-export const HeaderLinkAMobile = styled(HeaderLinkA)`
-  color: ${colours.blue};
-  font-size: 24px;
-`;
-
-export const MobileNavSection = styled.li`
-  margin-bottom: 16px;
-`;
-
-export const SubLinkMobile = styled.li`
-  margin-bottom: 8px;
-`;
-
-export const SubHeaderLinkA = styled.a`
-  color: ${colours.blue};
-  margin: 0 16px 0 16px;
-  transition: 0.1s;
-  font-size: 12px;
-`;
-export const SubHeaderLinkAMobile = styled(SubHeaderLinkA)`
-  color: ${colours.black};
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: 400;
-  font-size: 19px;
-`;
-
-export const Text = styled.h1<{ big: boolean }>`
-  font-size: ${(props) => (props.big ? 3 : 1.5)}em;
+export const ALink = styled(HeaderLinkA)`
   margin: 0;
 `;
 
-export const StyledLink = styled.a`
-  text-transform: lowercase;
-  text-decoration: none;
-  color: black;
-  @media (max-width: ${dimensions.mobileMax}) {
-    margin: 8px 0 8px 0;
-  }
-`;
-
-export const Accent = styled.em`
-  font-style: normal;
-  color: #0072f4;
-`;
-
-export const SmallPrint = styled.p`
-  font-size: 10px;
-  font-weight: 400;
-  margin: 0;
+export const LogoStyle = styled.a`
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: ${(props) => props.theme.elements.headline};
 `;
 
 export const UL = styled.ul`
@@ -209,42 +101,11 @@ export const UL = styled.ul`
   justify-content: flex-end;
   height: 100%;
   @media (max-width: ${dimensions.mobileMax}) {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    justify-content: center;
-    margin: 8px;
+    justify-content: space-between;
+    width: 100%;
   }
 `;
 
-export const MobileUL = styled.ul`
-  display: flex;
-  text-align: center;
-  list-style-type: none;
-  flex-direction: column;
-  justify-content: center;
-`;
-
 export const Header = styled.header`
-  background-color: ${colours.white};
-`;
-
-const slideInFromLeft = keyframes`
-    from{
-        transform: translateX(-100rem);
-        opacity: 0;
-    }
-    to{
-        transform: translateX(0);
-        opacity: 1;
-    }
-`;
-
-export const MobileNavList = styled.nav`
-  overflow-x: hidden;
-  animation: ${slideInFromLeft} 0.55s forwards ease-in-out;
-`;
-
-export const HamburgerMenuPadding = styled.div`
-  padding-right: 10px;
-  display: flex;
+  background-color: ${(props) => props.theme.elements.background};
 `;

@@ -11,3 +11,14 @@ export const ExperienceHeroSection = styled.section`
   justify-content: space-between;
   width: 100%;
 `;
+
+export const HistoryExperienceUL = styled.ul`
+  list-style-type: none;
+  text-align: start;
+  width: 100%;
+`;
+
+export const HistoryExperienceLI = styled.li`
+  text-align: start;
+  width: 100%;
+`;

@@ -14,6 +14,7 @@ export const NvContainer = styled.div`
   margin: 0 auto;
   box-sizing: border-box;
   position: relative;
+  background-color: ${(props) => props.theme.elements.background};
 `;
 
 export const NvContainerFixedWide = styled(NvContainer)`
@@ -30,6 +31,10 @@ export const NvContainerFixedWide = styled(NvContainer)`
     margin: 0 auto 32px;
     padding: 0 8px 0 8px;
   }
+`;
+
+export const BackgroundColour = styled.main`
+  background-color: ${(props) => props.theme.elements.background};
 `;
 
 export const TopBottomContainedPadding = styled.div`

@@ -1,43 +1,74 @@
 import Link from "next/link";
-import React from "react";
-import Headroom from "react-headroom";
+import React, { useState } from "react";
 import {
   Header,
-  HeaderContainer,
   UL,
   ULLI,
   HeaderLinkA,
-  Text,
-  Accent,
-  StyledLink,
+  LogoStyle,
   NavWrapper,
   HeaderGroup,
+  HamburgerMenuSection,
+  MobileMenuOverlay,
+  MobileMenuOverlayContent,
+  HamburgerMenuPadding,
 } from "./header.styles";
-import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
+import { RoughNotation } from "react-rough-notation";
+import HamburgerMenu from "react-hamburger-menu";
 
 const WebHeader = (props: HeaderPropsAsClass) => {
   const { headerLinks } = props;
+  const [showNav, setShowNav] = useState(false);
 
   return (
-    <Headroom
-      style={{
-        boxShadow: "1px 1px 1px rgba(0,0,0,0.025)",
-      }}
-    >
-      <Header>
-        <HeaderContainer>
-          <NavWrapper>
-            <HeaderGroup>
-              <div>
-                <Text big={false}>
-                  <RoughNotation color="#0072f4" type="underline" show={true}>
-                    <StyledLink href="/">CharlieSay</StyledLink>
-                  </RoughNotation>
-                </Text>
-              </div>
-              <UL>
+    <Header>
+      <NavWrapper>
+        <HeaderGroup>
+          <RoughNotation color={"#faae2b"} type="underline" show={true}>
+            <LogoStyle href="/">CharlieSay</LogoStyle>
+          </RoughNotation>
+          <UL>
+            {headerLinks.map((link) => (
+              <ULLI mobileNav={false} key={link.name}>
+                {!link.external && (
+                  <Link href={link.href} passHref={link.external}>
+                    <HeaderLinkA>{link.name}</HeaderLinkA>
+                  </Link>
+                )}
+                {link.external && (
+                  <HeaderLinkA href={link.href}>{link.name}</HeaderLinkA>
+                )}
+              </ULLI>
+            ))}
+          </UL>
+          <HamburgerMenuSection>
+            <HamburgerMenu
+              isOpen={showNav}
+              menuClicked={() => setShowNav(!showNav)}
+              width={22}
+              height={15}
+              strokeWidth={2}
+              rotate={0}
+              color="#00473e"
+              animationDuration={0.5}
+            />
+          </HamburgerMenuSection>
+          {showNav && (
+            <MobileMenuOverlay>
+              <MobileMenuOverlayContent>
+                <HamburgerMenuPadding>
+                  <HamburgerMenu
+                    isOpen={showNav}
+                    menuClicked={() => setShowNav(!showNav)}
+                    width={22}
+                    height={15}
+                    strokeWidth={3}
+                    rotate={0}
+                    color="#faae2b"
+                  />
+                </HamburgerMenuPadding>
                 {headerLinks.map((link) => (
-                  <ULLI key={link.name}>
+                  <ULLI mobileNav={true} key={link.name}>
                     {!link.external && (
                       <Link href={link.href} passHref={link.external}>
                         <HeaderLinkA>{link.name}</HeaderLinkA>
@@ -48,12 +79,12 @@ const WebHeader = (props: HeaderPropsAsClass) => {
                     )}
                   </ULLI>
                 ))}
-              </UL>
-            </HeaderGroup>
-          </NavWrapper>
-        </HeaderContainer>
-      </Header>
-    </Headroom>
+              </MobileMenuOverlayContent>
+            </MobileMenuOverlay>
+          )}
+        </HeaderGroup>
+      </NavWrapper>
+    </Header>
   );
 };
 

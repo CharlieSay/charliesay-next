@@ -3,35 +3,47 @@ import Head from "next/head";
 import Link from "next/link";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { Footer } from "../styles/common.styles";
-import { ContainerConstrained } from "../styles/containers.styles";
+import {
+  BackgroundColour,
+  ContainerConstrained,
+} from "../styles/containers.styles";
 import WebHeader from "../styles/header";
-import { lightTheme } from "../styles/theme";
+import { lightTheme, ThemeType } from "../styles/theme.styles";
 import header from "../data/nav-data.json";
+import { HeaderLinkA } from "../styles/header.styles";
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
+  @font-face {
+        font-family: 'proxima-nova';
+        font-style: normal;
+        font-weight: normal;
+        src: url("/proxima-nova-font.otf") format('otf');
+    }
+
   html,
   body {
+    background-color: ${({ theme }) => theme.elements.background};
     font-size: 18px;
-    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+    font-family: 'proxima-nova', Arial, sans-serif;
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.15;
   }
 
   a {
-    color: inherit;
     text-decoration: none;
   }
 
   * {
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
   }
 `;
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <GlobalStyle />
       <ThemeProvider theme={lightTheme}>
+        <GlobalStyle />
         <Head>
           <title>Charlie Say | Full-stack dev</title>
           <meta
@@ -41,11 +53,15 @@ function MyApp({ Component, pageProps }: AppProps) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <WebHeader headerLinks={header} />
-        <ContainerConstrained>
-          <Component {...pageProps} />
-        </ContainerConstrained>
+        <BackgroundColour>
+          <ContainerConstrained>
+            <Component {...pageProps} />
+          </ContainerConstrained>
+        </BackgroundColour>
         <Footer>
-          <Link href="https://nextjs.org/">Powered by Next JS</Link>
+          <HeaderLinkA href="https://nextjs.org/">
+            Powered by Next JS
+          </HeaderLinkA>
         </Footer>
       </ThemeProvider>
     </>

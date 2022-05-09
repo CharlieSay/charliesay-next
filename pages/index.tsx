@@ -8,9 +8,11 @@ import {
   Code,
   Description,
   Grid,
+  LinkBlue,
   Main,
   TitleH1,
 } from "../styles/common.styles";
+import { MiddleAlign } from "../styles/containers.styles";
 
 const HelloArray = [
   "Hello",
@@ -69,13 +71,13 @@ const Home: NextPage = () => {
 
   return (
     <Main>
-      <TitleH1>{name}</TitleH1>
       <TitleH1>
-        I&apos;m <Link href="/">Charlie Say 👋</Link>
+        <MiddleAlign>
+          {name}
+          <LinkBlue>I&apos;m Charlie Say</LinkBlue>
+        </MiddleAlign>
       </TitleH1>
-
       <Description>I&apos;m a full-stack dev from Manchester, UK</Description>
-      <Code>(maybe minus some devops parts 😬)</Code>
 
       <Grid>
         {indexPageCards.map((card, i) => (

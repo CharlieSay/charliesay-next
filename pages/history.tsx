@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import workHistory from "../data/work-history.json";
 import {
+  Description,
   Pill,
   PillBlur,
   PillSection,
@@ -11,6 +12,8 @@ import {
   ExperienceHeroSection,
   ExperienceList,
   ExperienceUnique,
+  HistoryExperienceLI,
+  HistoryExperienceUL,
 } from "../styles/history.styles";
 
 const History: NextPage = () => {
@@ -22,7 +25,10 @@ const History: NextPage = () => {
           <ExperienceUnique key={experience.title}>
             <ExperienceHeroSection>
               <TitleH2>{experience.company.toUpperCase()}</TitleH2>
-              <p>{experience.title}</p>
+              <Description>{experience.title}</Description>
+              <Description>
+                {experience.dateFrom} - {experience.dateTo}
+              </Description>
             </ExperienceHeroSection>
             <ExperienceList style={{ display: "flex" }}>
               {experience.keywords.map((keyword) => (
@@ -32,9 +38,15 @@ const History: NextPage = () => {
                 </PillSection>
               ))}
             </ExperienceList>
-            <p>
-              {experience.dateFrom} - {experience.dateTo}
-            </p>
+            <HistoryExperienceUL>
+              {experience.experience.map((exp) => (
+                <HistoryExperienceLI key={exp}>
+                  <Description style={{ textAlign: "start" }}>
+                    - {exp}
+                  </Description>
+                </HistoryExperienceLI>
+              ))}
+            </HistoryExperienceUL>
           </ExperienceUnique>
         ))}
       </ExperienceList>

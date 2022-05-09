@@ -1,24 +1,23 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-import { LinkBlue, TitleH1 } from "../styles/common.styles";
+import { TitleH1 } from "../styles/common.styles";
+import { ALink } from "../styles/header.styles";
 
 const ContactMe: NextPage = () => {
   return (
     <>
-      <TitleH1>ContactMe</TitleH1>
-      <p style={{ display: "flex" }}>
+      <TitleH1>Contact Me</TitleH1>
+      <p>
         <span>What fonts do you use? head on over </span>
-        <LinkBlue>
-          <Link href="/uses">here to find out </Link>
-        </LinkBlue>
+        <Link href={"/uses"} passHref={false}>
+          <ALink>here to find out </ALink>
+        </Link>
       </p>
-      <p style={{ display: "flex" }}>
+      <p>
         <span>Want me to do some work? drop me an </span>
-        <LinkBlue>
-          <a href="mailto:charlie@talesoft.digital?subject=Lets work together!">
-            email
-          </a>
-        </LinkBlue>
+        <ALink href="mailto:charlie@talesoft.digital?subject=Lets work together!">
+          email
+        </ALink>
       </p>
     </>
   );

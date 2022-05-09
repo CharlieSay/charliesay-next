@@ -1,37 +1,45 @@
 import type { NextPage } from "next";
-import Link from "next/link";
-import { TitleH1, CardP, LinkBlue } from "../styles/common.styles";
+import {
+  TitleH1,
+  CardP,
+  LinkBlue,
+  Description,
+  TitleH2,
+} from "../styles/common.styles";
+import { ALink } from "../styles/header.styles";
 
 const Uses: NextPage = () => {
   return (
     <>
       <TitleH1>Uses</TitleH1>
-      <CardP>
+      <Description>
         This may be out of date, but you can always find out what loads of other
         developers use over at
-        <LinkBlue>
-          <a href={"https://www.uses.tech"}> uses.tech</a>
-        </LinkBlue>
-      </CardP>
-      <CardP>
+        <ALink href={"https://www.uses.tech"}> uses.tech</ALink>
+      </Description>
+      <Description>
         If you&apos;re also looking for configs like VS Code and Intellij they
         can be found in my
-        <LinkBlue>
-          <a href="https://www.github.com/CharlieSay/config-repo">
-            {" "}
-            config repo
-          </a>
-        </LinkBlue>
-      </CardP>
-      <TitleH1>Editors (IDEs)</TitleH1>
-      <CardP>IntelliJ Ultimate, Visual Studio Code</CardP>
-      <TitleH1>Apps</TitleH1>
-      <CardP>ToDoist, Notion, Slack</CardP>
-      <TitleH1>Desk Setup</TitleH1>
-      <CardP>Flexispot standing desk, 2x LG 27UL650, Razer DeathAdder</CardP>
-      <TitleH1>Productivity</TitleH1>
-      <CardP>Google Suite</CardP>
-      <TitleH1>Other Things</TitleH1>
+        <ALink href="https://www.github.com/CharlieSay/config-repo">
+          {" "}
+          config repo
+        </ALink>
+      </Description>
+      <TitleH2>Editors (IDEs)</TitleH2>
+      <Description>IntelliJ Ultimate, Visual Studio Code</Description>
+      <TitleH2>Apps</TitleH2>
+      <Description>ToDoist, Notion, Slack</Description>
+      <TitleH2>Desk Setup</TitleH2>
+      <Description>
+        Flexispot standing desk, 2x LG 27UL650, Razer DeathAdder
+      </Description>
+      <TitleH2>Productivity</TitleH2>
+      <Description>Google Suite</Description>
+      <TitleH2>Other Things</TitleH2>
+      <Description>
+        Colour scheme pallets -
+        <ALink href="https://www.happyhues.co/"> Happy Hues</ALink>
+      </Description>
     </>
   );
 };
