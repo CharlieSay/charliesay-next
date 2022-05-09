@@ -25,8 +25,9 @@ const About: NextPage = () => {
         </HeroHello>
       </AboutHero>
       <Description>
-        I use HTML, CSS and JavaScript. Though constantly changing, my focus
-        right now is React.js, Node, Express, Lambda, Gatsby and Next.js
+        Use to be a pure java-dev, but being a creative person I switched to
+        full-stack development. HTML, CSS, JS, Java, React, GraphQL, NextJS,
+        Gatsby - those are my jam.
       </Description>
     </NvContainerFixedWide>
   );

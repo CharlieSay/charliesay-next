@@ -137,6 +137,7 @@ export const CardP = styled.p`
   font-size: 1.25rem;
   font-weight: 700;
   color: ${(props) => props.theme.elements.paragraph};
+  text-align: center;
 `;
 
 export const TwitterFeedPadding = styled.section`

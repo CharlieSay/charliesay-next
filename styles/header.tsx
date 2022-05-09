@@ -71,14 +71,7 @@ const WebHeader = (props: HeaderPropsAsClass) => {
                 </HamburgerMenuPadding>
                 {headerLinks.map((link) => (
                   <ULLI mobileNav={true} key={link.name}>
-                    {!link.external && (
-                      <Link href={link.href} passHref={link.external}>
-                        <HeaderLinkA>{link.name}</HeaderLinkA>
-                      </Link>
-                    )}
-                    {link.external && (
-                      <HeaderLinkA href={link.href}>{link.name}</HeaderLinkA>
-                    )}
+                    <HeaderLinkA href={link.href}>{link.name}</HeaderLinkA>
                   </ULLI>
                 ))}
               </MobileMenuOverlayContent>
