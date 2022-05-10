@@ -80,9 +80,7 @@ const WebHeader = (props: HeaderPropsAsClass) => {
           <ThemeSwitchContainer>
             <DarkModeSwitch
               checked={isLightMode}
-              onChange={() => {
-                themeSwitchHook(!isLightMode);
-              }}
+              onChange={() => themeSwitchHook()}
               size={30}
               moonColor={"#00473e"}
               sunColor={"#fffffe"}
@@ -97,7 +95,6 @@ const WebHeader = (props: HeaderPropsAsClass) => {
 interface HeaderPropsAsClass {
   headerLinks: Array<HeaderLink>;
   themeSwitchHook: () => void;
-  // themeSwitchHook: React.Dispatch<React.SetStateAction<any>>;
   isLightMode: boolean;
 }
 

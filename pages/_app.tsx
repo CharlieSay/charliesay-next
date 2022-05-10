@@ -56,6 +56,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </Head>
         <WebHeader
           isLightMode={theme === "light" ? true : false}
+          // @ts-ignore
           themeSwitchHook={themeToggler}
           headerLinks={header}
         />
