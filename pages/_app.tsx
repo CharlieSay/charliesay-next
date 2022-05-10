@@ -1,8 +1,7 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import Link from "next/link";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { Footer } from "../styles/common.styles";
+import { ALink, CopyLite, Footer } from "../styles/common.styles";
 import {
   BackgroundColour,
   ContainerConstrained,
@@ -10,8 +9,6 @@ import {
 import WebHeader from "../styles/header";
 import { darkTheme, lightTheme, ThemeType } from "../styles/theme.styles";
 import header from "../data/nav-data.json";
-import { HeaderLinkA } from "../styles/header.styles";
-import { useState } from "react";
 import { useDarkMode } from "../utils/theme";
 
 const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
@@ -68,9 +65,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           </ContainerConstrained>
         </BackgroundColour>
         <Footer>
-          <HeaderLinkA href="https://nextjs.org/">
-            Powered by Next JS
-          </HeaderLinkA>
+          <ALink href="https://nextjs.org/">Powered by Next JS</ALink>
+          <CopyLite> Oh and lots of coffee ☕</CopyLite>
         </Footer>
       </ThemeProvider>
     </>

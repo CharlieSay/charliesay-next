@@ -1,11 +1,6 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import {
-  Description,
-  TitleH2,
-  TitleH2Center,
-  TitleH3,
-} from "../styles/common.styles";
+import { Description, TitleH1, TitleH3 } from "../styles/common.styles";
 import profilePicture from "../public/about-pic.webp";
 import { NvContainerFixedWide } from "../styles/containers.styles";
 import { AboutHero, HeroHello } from "../styles/about.styles";
@@ -13,7 +8,7 @@ import { AboutHero, HeroHello } from "../styles/about.styles";
 const About: NextPage = () => {
   return (
     <NvContainerFixedWide>
-      <TitleH2>About</TitleH2>
+      <TitleH1>About</TitleH1>
       <AboutHero>
         <Image
           src={profilePicture}

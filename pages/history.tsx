@@ -1,56 +1,64 @@
 import type { NextPage } from "next";
 import workHistory from "../data/work-history.json";
 import {
-  Description,
+  CopyLite,
   Pill,
   PillBlur,
   PillSection,
   TitleH1,
   TitleH2,
+  ALink,
+  Copy,
 } from "../styles/common.styles";
 import {
   ExperienceHeroSection,
-  ExperienceList,
-  ExperienceUnique,
   HistoryExperienceLI,
+  ExperienceList,
+  ExperienceListPill,
+  ExperienceSection,
   HistoryExperienceUL,
 } from "../styles/history.styles";
+import { NvContainerFixedWide } from "../styles/containers.styles";
 
 const History: NextPage = () => {
   return (
-    <>
+    <NvContainerFixedWide>
       <TitleH1>History</TitleH1>
       <ExperienceList>
         {workHistory.map((experience) => (
-          <ExperienceUnique key={experience.title}>
+          <ExperienceSection key={experience.title}>
             <ExperienceHeroSection>
-              <TitleH2>{experience.company.toUpperCase()}</TitleH2>
-              <Description>{experience.title}</Description>
-              <Description>
-                {experience.dateFrom} - {experience.dateTo}
-              </Description>
+              <TitleH2>
+                <ALink href={experience.website}>
+                  {experience.company.toUpperCase()}
+                </ALink>
+              </TitleH2>
+              <section>
+                <Copy>{experience.title}</Copy>
+                <CopyLite>
+                  {experience.dateFrom} - {experience.dateTo}
+                </CopyLite>
+              </section>
             </ExperienceHeroSection>
-            <ExperienceList style={{ display: "flex" }}>
+            <ExperienceListPill>
               {experience.keywords.map((keyword) => (
                 <PillSection key={keyword}>
                   <Pill>{keyword}</Pill>
                   <PillBlur />
                 </PillSection>
               ))}
-            </ExperienceList>
+            </ExperienceListPill>
             <HistoryExperienceUL>
               {experience.experience.map((exp) => (
                 <HistoryExperienceLI key={exp}>
-                  <Description style={{ textAlign: "start" }}>
-                    - {exp}
-                  </Description>
+                  <CopyLite>- {exp}</CopyLite>
                 </HistoryExperienceLI>
               ))}
             </HistoryExperienceUL>
-          </ExperienceUnique>
+          </ExperienceSection>
         ))}
       </ExperienceList>
-    </>
+    </NvContainerFixedWide>
   );
 };
 

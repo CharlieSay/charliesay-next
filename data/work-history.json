@@ -5,7 +5,7 @@
     "website": "www.itv.co.uk",
     "keywords": ["React", "Java", "Kotlin"],
     "experience": [
-      "Leading front-end project on a new initiative to bring Digital Advertising (ITV Hub) in line with traditional advertising (Air Time Sales)",
+      "Assisting front-end project on a new initiative to bring Digital Advertising (ITV Hub) in line with traditional advertising (Air Time Sales)",
       "Scoping use of AWS Amplify (& various other AWS Services) for above project",
       "Partaking in Lambda & Kotlin based backend work for above project."
     ],
@@ -13,7 +13,7 @@
     "dateTo": "Present"
   },
   {
-    "company": "Moneysupermarket Group",
+    "company": "Moneysupermarket",
     "title": "Java Engineer (& Fullstack)",
     "website": "https://www.moneysupermarket.com/",
     "keywords": [
@@ -37,7 +37,7 @@
     "dateTo": "March 2022"
   },
   {
-    "company": "AutoTrader UK",
+    "company": "AutoTrader",
     "title": "Junior Java Engineer",
     "website": "https://www.autotrader.co.uk",
     "keywords": [

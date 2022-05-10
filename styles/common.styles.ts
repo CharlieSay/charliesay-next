@@ -28,6 +28,7 @@ export const Footer = styled.footer`
   justify-content: center;
   align-items: center;
   background-color: ${(props) => props.theme.elements.background};
+  flex-direction: column;
 `;
 
 export const FooterLinkA = styled.a`
