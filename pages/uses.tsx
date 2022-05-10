@@ -6,9 +6,11 @@ import {
   UL,
   LI,
   Copy,
+  ALink,
+  RightMarginEight,
 } from "../styles/common.styles";
 import { NvContainerFixedWide } from "../styles/containers.styles";
-import { ALink, ULLI } from "../styles/header.styles";
+import Image from "next/image";
 import usesData from "../data/uses.json";
 
 const Uses: NextPage = () => {
@@ -34,9 +36,15 @@ const Uses: NextPage = () => {
           <UL>
             {section.items.map((item) => (
               <LI key={item.item}>
-                <img
-                  src={`https://s2.googleusercontent.com/s2/favicons?domain_url=${item.href}`}
-                />
+                <RightMarginEight>
+                  <Image
+                    src={`https://s2.googleusercontent.com/s2/favicons?domain_url=${item.href}`}
+                    alt={`Icon of ${item.item}`}
+                    layout={"fixed"}
+                    width={20}
+                    height={20}
+                  />
+                </RightMarginEight>
                 <ALink href={item.href}>
                   <Copy style={{ margin: "0" }}>{item.item}</Copy>
                   {item.optionalCopy && (

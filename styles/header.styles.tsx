@@ -86,10 +86,6 @@ export const HeaderLinkA = styled.a`
   }
 `;
 
-export const ALink = styled(HeaderLinkA)`
-  margin: 0;
-`;
-
 export const LogoStyle = styled.a`
   font-weight: 700;
   font-size: 1.2rem;

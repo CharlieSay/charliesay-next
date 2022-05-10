@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-import { TitleH1 } from "../styles/common.styles";
-import { ALink } from "../styles/header.styles";
+import { ALink, TitleH1 } from "../styles/common.styles";
 
 const ContactMe: NextPage = () => {
   return (

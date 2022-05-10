@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { dimensions } from "./containers.styles";
+import { HeaderLinkA } from "./header.styles";
 
 export const Container = styled.div`
   padding: 0 2rem;
@@ -177,4 +178,12 @@ export const LI = styled.li`
     margin-right: 8px;
     object-fit: contain;
   }
+`;
+
+export const ALink = styled(HeaderLinkA)`
+  margin: 0;
+`;
+
+export const RightMarginEight = styled.section`
+  margin-right: 8px;
 `;
