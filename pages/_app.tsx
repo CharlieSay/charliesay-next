@@ -12,6 +12,7 @@ import { darkTheme, lightTheme, ThemeType } from "../styles/theme.styles";
 import header from "../data/nav-data.json";
 import { HeaderLinkA } from "../styles/header.styles";
 import { useState } from "react";
+import { useDarkMode } from "../utils/theme";
 
 const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   @font-face {
@@ -41,10 +42,12 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 `;
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [lightMode, setLightMode] = useState(true);
+  const [theme, themeToggler] = useDarkMode();
+
+  const themeMode = theme === "light" ? lightTheme : darkTheme;
   return (
     <>
-      <ThemeProvider theme={lightMode ? lightTheme : darkTheme}>
+      <ThemeProvider theme={themeMode}>
         <GlobalStyle />
         <Head>
           <title>Charlie Say | Full-stack dev</title>
@@ -55,8 +58,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <WebHeader
-          isLightMode={lightMode}
-          themeSwitchHook={setLightMode}
+          isLightMode={theme === "light" ? true : false}
+          themeSwitchHook={themeToggler}
           headerLinks={header}
         />
         <BackgroundColour>

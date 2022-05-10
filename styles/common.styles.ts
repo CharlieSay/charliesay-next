@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { dimensions } from "./containers.styles";
 
 export const Container = styled.div`
   padding: 0 2rem;
@@ -91,6 +92,14 @@ export const TitleH2 = styled.h2`
   color: ${(props) => props.theme.elements.headline};
 `;
 
+export const TitleH3 = styled.h3`
+  text-decoration: none;
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: ${(props) => props.theme.elements.headline};
+`;
+
 export const TitleH2Center = styled(TitleH2)`
   text-align: center;
 `;
@@ -99,6 +108,18 @@ export const Description = styled.p`
   text-align: center;
   font-size: 1.3rem;
   font-weight: 400;
+  color: ${(props) => props.theme.elements.paragraph};
+`;
+
+export const Copy = styled.p`
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: ${(props) => props.theme.elements.paragraph};
+`;
+
+export const CopyLite = styled.p`
+  font-size: 0.9rem;
+  font-weight: 200;
   color: ${(props) => props.theme.elements.paragraph};
 `;
 
@@ -142,4 +163,18 @@ export const CardP = styled.p`
 
 export const TwitterFeedPadding = styled.section`
   padding-top: 64px;
+`;
+
+export const UL = styled.ul`
+  display: block;
+`;
+
+export const LI = styled.li`
+  list-style: none;
+  display: flex;
+  margin: 0;
+  img {
+    margin-right: 8px;
+    object-fit: contain;
+  }
 `;

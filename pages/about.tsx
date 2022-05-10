@@ -1,6 +1,11 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import { Description, TitleH2Center } from "../styles/common.styles";
+import {
+  Description,
+  TitleH2,
+  TitleH2Center,
+  TitleH3,
+} from "../styles/common.styles";
 import profilePicture from "../public/about-pic.webp";
 import { NvContainerFixedWide } from "../styles/containers.styles";
 import { AboutHero, HeroHello } from "../styles/about.styles";
@@ -8,8 +13,7 @@ import { AboutHero, HeroHello } from "../styles/about.styles";
 const About: NextPage = () => {
   return (
     <NvContainerFixedWide>
-      <TitleH2Center>About</TitleH2Center>
-
+      <TitleH2>About</TitleH2>
       <AboutHero>
         <Image
           src={profilePicture}
@@ -24,10 +28,18 @@ const About: NextPage = () => {
           <Description>👋 I&apos;m Charlie Say</Description>
         </HeroHello>
       </AboutHero>
+      <TitleH3>World&apos;s smallest memoir X</TitleH3>
       <Description>
-        Use to be a pure java-dev, but being a creative person I switched to
-        full-stack development. HTML, CSS, JS, Java, React, GraphQL, NextJS,
-        Gatsby - those are my jam.
+        And I&apos;m a developer from Manchester, UK 🐝
+        <br />
+        I&apos;m 25 years old and have been a developer since September 2017! (5
+        Years 😲)
+      </Description>
+      <Description>
+        Software for me started out as an Apprentice Java dev, but as time went
+        on I started to love doing consumer facing front-end work coming from
+        the creative industry. So I switched to full-stack development. HTML,
+        CSS, JS, Java, React, GraphQL, NextJS, Gatsby - those are my jam.
       </Description>
     </NvContainerFixedWide>
   );

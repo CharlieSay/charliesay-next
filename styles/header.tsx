@@ -96,7 +96,8 @@ const WebHeader = (props: HeaderPropsAsClass) => {
 
 interface HeaderPropsAsClass {
   headerLinks: Array<HeaderLink>;
-  themeSwitchHook: React.Dispatch<React.SetStateAction<any>>;
+  themeSwitchHook: () => void;
+  // themeSwitchHook: React.Dispatch<React.SetStateAction<any>>;
   isLightMode: boolean;
 }
 

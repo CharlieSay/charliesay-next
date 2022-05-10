@@ -1,0 +1,96 @@
+[
+  {
+    "sectionTitle": "Apps",
+    "items": [
+      {
+        "item": "Hoppscotch",
+        "optionalCopy": "For navigating REST",
+        "href": "https://hoppscotch.io/"
+      },
+      {
+        "item": "Notion",
+        "optionalCopy": "For all my note taking",
+        "href": "https://www.notion.so/"
+      },
+      {
+        "item": "Slack",
+        "optionalCopy": "Comms 🎧",
+        "href": "https://www.slack.com/"
+      },
+      {
+        "item": "ToDoist",
+        "optionalCopy": "tasks tasks tasks",
+        "href": "https://todoist.com/"
+      },
+      {
+        "item": "Figma",
+        "optionalCopy": "If i design, its in figma",
+        "href": "https://www.figma.com/"
+      },
+      {
+        "item": "HappyHues",
+        "optionalCopy": "Colour palletes galore!",
+        "href": "https://www.happyhues.co/"
+      }
+    ]
+  },
+  {
+    "sectionTitle": "Editors (IDEs)",
+    "items": [
+      {
+        "item": "IntelliJ Ultimate",
+        "href": "https://www.jetbrains.com/idea/"
+      },
+      {
+        "item": "Visual Studio Code",
+        "href": "https://code.visualstudio.com/"
+      },
+      {
+        "item": "Sublime Text",
+        "href": "https://www.sublimetext.com/"
+      }
+    ]
+  },
+  {
+    "sectionTitle": "My Desk Setup",
+    "items": [
+      {
+        "item": "Flexispot Standing Desk Frame EC5",
+        "href": "https://flexispot.co.uk/3-stage-desk-frame-e5.html"
+      },
+      {
+        "item": "LG 27UL650 (times 2)",
+        "href": "https://www.lg.com/uk/monitors/lg-27UL650"
+      },
+      {
+        "item": "Razer Mamba Elite",
+        "href": "https://www.razer.com/gaming-mice/razer-mamba-elite/RZ01-02560100-R3M1"
+      },
+      {
+        "item": "Keychron K3",
+        "href": "https://www.keychron.uk/products/keychron-k3-ultra-slim-wireless-mechanical-keyboard-uk-iso-layout-version-2"
+      },
+      {
+        "item": "Blue Yeti",
+        "href": "https://www.bluemic.com/en-gb/products/yeti/"
+      },
+      {
+        "item": "HyperX HX-MPFS-XL Fury S Pro",
+        "href": "https://www.amazon.co.uk/HyperX-FURY-Pro-Gaming-Mouse/dp/B0716ZHGKT?th=1"
+      },
+      {
+        "item": "Logitech C920",
+        "optionalCopy": "Gonna switch it soon though",
+        "href": "https://www.amazon.co.uk/dp/B07QZZS7S1?ref=nb_sb_ss_w_as-reorder-t2_ypp_rep_k0_1_16&amp;crid=2090WZ1ZCBX9X&amp;sprefix=logitech+webcam"
+      },
+      {
+        "item": "HAUEA Microphone Arm Stand",
+        "href": "https://www.amazon.co.uk/gp/product/B073VJKD9Q/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1"
+      },
+      {
+        "item": "Bontec Dual MOniutor Stand",
+        "href": "https://www.amazon.co.uk/gp/product/B01MR397OH/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1"
+      }
+    ]
+  }
+]

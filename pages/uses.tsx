@@ -1,40 +1,56 @@
 import type { NextPage } from "next";
-import { TitleH1, Description, TitleH2 } from "../styles/common.styles";
-import { ALink } from "../styles/header.styles";
+import {
+  TitleH1,
+  CopyLite,
+  TitleH2,
+  UL,
+  LI,
+  Copy,
+} from "../styles/common.styles";
+import { NvContainerFixedWide } from "../styles/containers.styles";
+import { ALink, ULLI } from "../styles/header.styles";
+import usesData from "../data/uses.json";
 
 const Uses: NextPage = () => {
   return (
-    <>
+    <NvContainerFixedWide>
       <TitleH1>Uses</TitleH1>
-      <Description>
+      <Copy>
         This may be out of date, but you can always find out what loads of other
         developers use over at
         <ALink href={"https://www.uses.tech"}> uses.tech</ALink>
-      </Description>
-      <Description>
+      </Copy>
+      <Copy>
         If you&apos;re also looking for configs like VS Code and Intellij they
         can be found in my
         <ALink href="https://www.github.com/CharlieSay/config-repo">
           {" "}
           config repo
         </ALink>
-      </Description>
-      <TitleH2>Editors (IDEs)</TitleH2>
-      <Description>IntelliJ Ultimate, Visual Studio Code</Description>
-      <TitleH2>Apps</TitleH2>
-      <Description>ToDoist, Notion, Slack</Description>
-      <TitleH2>Desk Setup</TitleH2>
-      <Description>
-        Flexispot standing desk, 2x LG 27UL650, Razer DeathAdder
-      </Description>
-      <TitleH2>Productivity</TitleH2>
-      <Description>Google Suite</Description>
-      <TitleH2>Other Things</TitleH2>
-      <Description>
-        Colour scheme pallets -
-        <ALink href="https://www.happyhues.co/"> Happy Hues</ALink>
-      </Description>
-    </>
+      </Copy>
+      {usesData.map((section) => (
+        <section key={section.sectionTitle}>
+          <TitleH2>{section.sectionTitle}</TitleH2>
+          <UL>
+            {section.items.map((item) => (
+              <LI key={item.item}>
+                <img
+                  src={`https://s2.googleusercontent.com/s2/favicons?domain_url=${item.href}`}
+                />
+                <ALink href={item.href}>
+                  <Copy style={{ margin: "0" }}>{item.item}</Copy>
+                  {item.optionalCopy && (
+                    <CopyLite style={{ margin: "0" }}>
+                      {item.optionalCopy}
+                    </CopyLite>
+                  )}
+                </ALink>
+              </LI>
+            ))}
+          </UL>
+        </section>
+      ))}
+    </NvContainerFixedWide>
   );
 };
 
