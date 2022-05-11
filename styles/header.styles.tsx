@@ -44,7 +44,6 @@ export const MobileMenuOverlay = styled.nav`
   background-color: ${(props) =>
     props.theme.elements.background}; /* Black fallback color */
   overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.5s;
 `;
 
 export const MobileMenuOverlayContent = styled.section`

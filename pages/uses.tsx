@@ -45,7 +45,7 @@ const Uses: NextPage = () => {
                     height={20}
                   />
                 </RightMarginEight>
-                <ALink href={item.href}>
+                <ALink href={item.href} target="_blank">
                   <Copy style={{ margin: "0" }}>{item.item}</Copy>
                   {item.optionalCopy && (
                     <CopyLite style={{ margin: "0" }}>

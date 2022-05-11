@@ -26,6 +26,10 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     font-family: 'proxima-nova', Arial, sans-serif;
     margin: 0;
     line-height: 1.15;
+    transition: all 0.25s linear;
+    & ::selection {
+    background: ${(props) => props.theme.illustration.secondary};
+    }
   }
 
   a {

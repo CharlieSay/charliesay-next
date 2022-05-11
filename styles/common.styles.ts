@@ -31,13 +31,6 @@ export const Footer = styled.footer`
   flex-direction: column;
 `;
 
-export const FooterLinkA = styled.a`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-`;
-
 export const TitleH1 = styled.h1`
   text-decoration: none;
   margin-bottom: 1rem;
@@ -173,6 +166,7 @@ export const TwitterFeedPadding = styled.section`
 
 export const UL = styled.ul`
   display: block;
+  padding: 0;
 `;
 
 export const LI = styled.li`
