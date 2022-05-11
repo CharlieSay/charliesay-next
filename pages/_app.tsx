@@ -47,12 +47,21 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ThemeProvider theme={themeMode}>
         <GlobalStyle />
         <Head>
-          <title>Charlie Say | Full-stack dev</title>
+          <title>Charlie Say | Full-stack developer</title>
+          <meta name="title" content="Charlie Say | Full-stack developer" />
           <meta
             name="description"
-            content="Im a full stack Java dev from Manchester UK"
+            content="A full-stack developer from Manchester UK, who wants to help you become the best developer in the software world."
           />
-          <link rel="icon" href="/favicon.ico" />
+          <meta name="keywords" content="developer, full stack, react, java" />
+          <meta name="robots" content="index, follow" />
+          <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta name="language" content="English" />
+          <meta name="author" content="@charliesay_" />
+          <link
+            rel="icon"
+            href={theme === "light" ? "/favicon.ico" : "/favicon-dark.ico"}
+          />
         </Head>
         <WebHeader
           isLightMode={theme === "light" ? true : false}
