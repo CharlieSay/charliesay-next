@@ -1,24 +1,24 @@
 import type { NextPage } from "next";
 import workHistory from "../data/work-history.json";
 import {
+  ALink,
+  Copy,
   CopyLite,
   Pill,
   PillBlur,
   PillSection,
   TitleH1,
   TitleH2,
-  ALink,
-  Copy,
 } from "../styles/common.styles";
+import { NvContainerFixedWide } from "../styles/containers.styles";
 import {
   ExperienceHeroSection,
-  HistoryExperienceLI,
   ExperienceList,
   ExperienceListPill,
   ExperienceSection,
+  HistoryExperienceLI,
   HistoryExperienceUL,
 } from "../styles/history.styles";
-import { NvContainerFixedWide } from "../styles/containers.styles";
 
 const History: NextPage = () => {
   return (

@@ -1,12 +1,6 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-import {
-  ALink,
-  Copy,
-  Description,
-  TitleH1,
-  TitleH2,
-} from "../styles/common.styles";
+import { ALink, Copy, TitleH1 } from "../styles/common.styles";
 import { NvContainerFixedWide } from "../styles/containers.styles";
 
 const ContactMe: NextPage = () => {

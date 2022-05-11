@@ -1,21 +1,21 @@
 import Link from "next/link";
 import React, { useState } from "react";
+import HamburgerMenu from "react-hamburger-menu";
+import { RoughNotation } from "react-rough-notation";
+import { DarkModeSwitch } from "react-toggle-dark-mode";
 import {
+  HamburgerMenuSection,
   Header,
-  UL,
-  ULLI,
+  HeaderGroup,
   HeaderLinkA,
   LogoStyle,
-  NavWrapper,
-  HeaderGroup,
-  HamburgerMenuSection,
   MobileMenuOverlay,
   MobileMenuOverlayContent,
+  NavWrapper,
   ThemeSwitchContainer,
+  UL,
+  ULLI,
 } from "./header.styles";
-import { RoughNotation } from "react-rough-notation";
-import HamburgerMenu from "react-hamburger-menu";
-import { DarkModeSwitch } from "react-toggle-dark-mode";
 
 const WebHeader = (props: HeaderPropsAsClass) => {
   const { headerLinks, themeSwitchHook, isLightMode } = props;

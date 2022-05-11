@@ -1,17 +1,16 @@
 import type { NextPage } from "next";
 import { useCallback, useEffect, useState } from "react";
+import Skeleton from "react-loading-skeleton";
+import { RoughNotation } from "react-rough-notation";
+import { TwitterTimelineEmbed } from "react-twitter-embed";
 import {
-  Description,
-  RoughNotationDescription,
   LinkBlue,
   Main,
+  RoughNotationDescription,
   TitleH1,
   TwitterFeedPadding,
 } from "../styles/common.styles";
 import { MiddleAlign } from "../styles/containers.styles";
-import { RoughNotation } from "react-rough-notation";
-import { TwitterTimelineEmbed } from "react-twitter-embed";
-import Skeleton from "react-loading-skeleton";
 
 const HelloArray = [
   "Hello",

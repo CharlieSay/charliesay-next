@@ -2,8 +2,7 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import profilePicture from "../public/profile-pic.webp";
 import { AboutHero, BioDescription, HeroHello } from "../styles/about.styles";
-import { TitleH1, Description, TitleH3 } from "../styles/common.styles";
-
+import { Description, TitleH1 } from "../styles/common.styles";
 import { NvContainerFixedWide } from "../styles/containers.styles";
 
 const About: NextPage = () => {

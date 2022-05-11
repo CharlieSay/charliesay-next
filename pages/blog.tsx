@@ -1,9 +1,6 @@
 import fs from "fs";
-import path from "path";
 import matter from "gray-matter";
-import Link from "next/link";
-import Image from "next/image";
-import { Key } from "react";
+import path from "path";
 import { Copy, TitleH1 } from "../styles/common.styles";
 import { NvContainerFixedWide } from "../styles/containers.styles";
 

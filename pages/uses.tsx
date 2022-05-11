@@ -1,17 +1,17 @@
 import type { NextPage } from "next";
-import {
-  TitleH1,
-  CopyLite,
-  TitleH2,
-  UL,
-  LI,
-  Copy,
-  ALink,
-  RightMarginEight,
-} from "../styles/common.styles";
-import { NvContainerFixedWide } from "../styles/containers.styles";
 import Image from "next/image";
 import usesData from "../data/uses.json";
+import {
+  ALink,
+  Copy,
+  CopyLite,
+  LI,
+  RightMarginEight,
+  TitleH1,
+  TitleH2,
+  UL,
+} from "../styles/common.styles";
+import { NvContainerFixedWide } from "../styles/containers.styles";
 
 const Uses: NextPage = () => {
   return (

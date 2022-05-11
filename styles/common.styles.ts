@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { dimensions } from "./containers.styles";
 import { HeaderLinkA } from "./header.styles";
 
 export const Container = styled.div`
