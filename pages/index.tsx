@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import { useCallback, useEffect, useState } from "react";
 import {
   Description,
+  RoughNotationDescription,
   LinkBlue,
   Main,
   TitleH1,
@@ -42,7 +43,7 @@ const Home: NextPage = () => {
           <LinkBlue>I&apos;m Charlie Say</LinkBlue>
         </MiddleAlign>
       </TitleH1>
-      <Description>
+      <RoughNotationDescription>
         <RoughNotation
           color={"#faae2b"}
           type="highlight"
@@ -51,7 +52,7 @@ const Home: NextPage = () => {
         >
           I want to help you become the best you in the software space.
         </RoughNotation>
-      </Description>
+      </RoughNotationDescription>
       <TwitterFeedPadding>
         <TwitterTimelineEmbed
           placeholder={<Skeleton count={5} height={400} width={300} />}

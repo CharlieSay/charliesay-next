@@ -113,6 +113,10 @@ export const Description = styled.p`
   color: ${(props) => props.theme.elements.paragraph};
 `;
 
+export const RoughNotationDescription = styled(Description)`
+  color: ${(props) => props.theme.illustration.stroke};
+`;
+
 export const Copy = styled.p`
   font-size: 1.1rem;
   font-weight: 400;
