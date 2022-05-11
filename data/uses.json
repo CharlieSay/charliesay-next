@@ -1,12 +1,7 @@
 [
   {
-    "sectionTitle": "Apps",
+    "sectionTitle": "Productivity",
     "items": [
-      {
-        "item": "Hoppscotch",
-        "optionalCopy": "For navigating REST",
-        "href": "https://hoppscotch.io/"
-      },
       {
         "item": "Notion",
         "optionalCopy": "For all my note taking",
@@ -19,13 +14,78 @@
       },
       {
         "item": "ToDoist",
-        "optionalCopy": "tasks tasks tasks",
+        "optionalCopy": "Tasks tasks tasks",
         "href": "https://todoist.com/"
       },
       {
+        "item": "Magnet",
+        "optionalCopy": "Window management for Mac. GAME. CHANGER.",
+        "href": "https://magnet.crowdcafe.com/"
+      },
+      {
+        "item": "Vanilla",
+        "optionalCopy": "Cleans up a cluttered menu bar",
+        "href": "https://matthewpalmer.net/vanilla/"
+      },
+      {
+        "item": "Alfred",
+        "optionalCopy": "Honestly changed how I use my mac.",
+        "href": "https://www.alfredapp.com/"
+      },
+      {
+        "item": "1Password",
+        "optionalCopy": "Not free like other Password managers, but the premium is worth it.",
+        "href": "https://1password.com/"
+      }
+    ]
+  },
+  {
+    "sectionTitle": "Editors & Development",
+    "items": [
+      {
+        "item": "IntelliJ Ultimate",
+        "optionalCopy": "Java & Kotlin IDE",
+        "href": "https://www.jetbrains.com/idea/"
+      },
+      {
+        "item": "Visual Studio Code",
+        "optionalCopy": "For literally anything that isn't Java or Kotlin",
+        "href": "https://code.visualstudio.com/"
+      },
+      {
+        "item": "Sublime Text",
+        "optionalCopy": "Fancy text editor, but is great.",
+        "href": "https://www.sublimetext.com/"
+      },
+      {
+        "item": "Hyper",
+        "optionalCopy": "My go to Terminal",
+        "href": "https://hyper.is/"
+      },
+      {
+        "item": "OhMyZsh (& Zsh)",
+        "optionalCopy": "ZSH-Shell gang",
+        "href": "https://ohmyz.sh/"
+      },
+      {
+        "item": "Hoppscotch",
+        "optionalCopy": "For navigating REST",
+        "href": "https://hoppscotch.io/"
+      }
+    ]
+  },
+  {
+    "sectionTitle": "Design",
+    "items": [
+      {
         "item": "Figma",
-        "optionalCopy": "If i design, its in figma",
+        "optionalCopy": "Figma is just a well-rounded design tool.",
         "href": "https://www.figma.com/"
+      },
+      {
+        "item": "Adobe Suite",
+        "optionalCopy": "If I need to make small edits I use the suite",
+        "href": "https://www.adobe.com/uk/creativecloud.html"
       },
       {
         "item": "HappyHues",
@@ -35,19 +95,19 @@
     ]
   },
   {
-    "sectionTitle": "Editors (IDEs)",
+    "sectionTitle": "Gadgets & Tech",
     "items": [
       {
-        "item": "IntelliJ Ultimate",
-        "href": "https://www.jetbrains.com/idea/"
+        "item": "Work Mac (Macbook 15' 2017 2.9Ghz i7)",
+        "href": "https://www.apple.com/uk/"
       },
       {
-        "item": "Visual Studio Code",
-        "href": "https://code.visualstudio.com/"
+        "item": "Personal Mac",
+        "href": "https://www.apple.com/uk/"
       },
       {
-        "item": "Sublime Text",
-        "href": "https://www.sublimetext.com/"
+        "item": "iPhone 12 Pro Max (256GB)",
+        "href": "https://www.apple.com/uk/"
       }
     ]
   },
@@ -80,7 +140,6 @@
       },
       {
         "item": "Logitech C920",
-        "optionalCopy": "Gonna switch it soon though",
         "href": "https://www.amazon.co.uk/dp/B07QZZS7S1?ref=nb_sb_ss_w_as-reorder-t2_ypp_rep_k0_1_16&amp;crid=2090WZ1ZCBX9X&amp;sprefix=logitech+webcam"
       },
       {

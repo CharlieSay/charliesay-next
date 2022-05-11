@@ -10,6 +10,7 @@ import {
 import WebHeader from "../components/header";
 import { darkTheme, lightTheme, ThemeType } from "../styles/theme.styles";
 import { useDarkMode } from "../utils/theme";
+import Script from "next/script";
 
 const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   @font-face {
@@ -83,6 +84,21 @@ function MyApp({ Component, pageProps }: AppProps) {
           <CopyLite> Oh and lots of coffee ☕</CopyLite>
         </Footer>
       </ThemeProvider>
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-TC0MGZCHC7"
+      />
+      <Script
+        id="google-analytics"
+        dangerouslySetInnerHTML={{
+          __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-TC0MGZCHC7', { page_path: window.location.pathname });
+            `,
+        }}
+      />
     </>
   );
 }
