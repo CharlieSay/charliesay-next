@@ -7,7 +7,7 @@ import {
   BackgroundColour,
   ContainerConstrained,
 } from "../styles/containers.styles";
-import WebHeader from "../styles/header";
+import WebHeader from "../components/header";
 import { darkTheme, lightTheme, ThemeType } from "../styles/theme.styles";
 import { useDarkMode } from "../utils/theme";
 

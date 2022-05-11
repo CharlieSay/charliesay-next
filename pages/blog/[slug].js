@@ -5,7 +5,6 @@ import path from "path";
 import matter from "gray-matter";
 import SyntaxHighlighter from "react-syntax-highlighter";
 
-
 const components = { SyntaxHighlighter };
 
 const PostPage = ({ frontMatter: { title, date }, mdxSource }) => {

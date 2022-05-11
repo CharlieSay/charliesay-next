@@ -1,16 +1,8 @@
 import styled from "styled-components";
 
-const dimensions = {
-  maxWidth: "1200px",
-  minWidth: "320px",
-  contentWidth: "1024px",
-  mobileMax: "860px",
-  baseUnit: "8px",
-};
-
 export const NavWrapper = styled.nav`
   margin: 0 auto;
-  max-width: ${dimensions.maxWidth};
+  max-width: ${(props) => props.theme.dimensions.maxWidth};
 `;
 
 export const HeaderGroup = styled.div`
@@ -21,7 +13,7 @@ export const HeaderGroup = styled.div`
   z-index: 210;
   padding: 16px 32px;
 
-  @media (max-width: ${dimensions.mobileMax}) {
+  @media (max-width: ${(props) => props.theme.dimensions.mobileMax}) {
     justify-content: space-around;
     width: 100%;
   }
@@ -29,7 +21,7 @@ export const HeaderGroup = styled.div`
 
 export const HamburgerMenuSection = styled.section`
   display: none;
-  @media (max-width: ${dimensions.mobileMax}) {
+  @media (max-width: ${(props) => props.theme.dimensions.mobileMax}) {
     display: inline;
   }
 `;
@@ -58,7 +50,7 @@ export const MobileMenuOverlayContent = styled.section`
 
 export const ULLI = styled.li<{ mobileNav: boolean }>`
   display: ${(props) => (props.mobileNav ? "none" : "inline")};
-  @media (max-width: ${dimensions.mobileMax}) {
+  @media (max-width: ${(props) => props.theme.dimensions.mobileMax}) {
     display: ${(props) => (props.mobileNav ? "inline" : "none")};
     flex-direction: column;
     height: 100%;
@@ -93,7 +85,7 @@ export const UL = styled.ul`
   align-items: center;
   justify-content: flex-end;
   height: 100%;
-  @media (max-width: ${dimensions.mobileMax}) {
+  @media (max-width: ${(props) => props.theme.dimensions.mobileMax}) {
     justify-content: space-between;
     width: 100%;
   }

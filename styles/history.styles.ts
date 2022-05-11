@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { dimensions } from "./containers.styles";
 
 export const ExperienceSection = styled.section``;
 
@@ -26,7 +25,7 @@ export const ExperienceHeroSection = styled.section`
   section {
     text-align: end;
   }
-  @media (max-width: ${dimensions.mobileMax}) {
+  @media (max-width: ${(props) => props.theme.dimensions.mobileMax}) {
     h2 {
       margin: auto;
       text-align: center;

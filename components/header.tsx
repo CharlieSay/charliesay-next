@@ -15,7 +15,7 @@ import {
   ThemeSwitchContainer,
   UL,
   ULLI,
-} from "./header.styles";
+} from "../styles/header.styles";
 
 const WebHeader = (props: HeaderPropsAsClass) => {
   const { headerLinks, themeSwitchHook, isLightMode } = props;

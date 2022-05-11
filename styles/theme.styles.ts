@@ -54,7 +54,13 @@ const defaultTheme = {
     heading: 1.3,
     code: 1.6,
   },
-  // ...
+  dimensions: {
+    maxWidth: "1200px",
+    minWidth: "320px",
+    contentWidth: "1024px",
+    mobileMax: "860px",
+    baseUnit: "8px",
+  },
 };
 
 export type ThemeType = typeof lightTheme;

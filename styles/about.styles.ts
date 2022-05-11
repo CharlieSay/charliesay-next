@@ -1,12 +1,11 @@
 import styled from "styled-components";
 import { Description } from "./common.styles";
-import { dimensions } from "./containers.styles";
 
 export const AboutHero = styled.section`
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
-  @media (max-width: ${dimensions.mobileMax}) {
+  @media (max-width: ${(props) => props.theme.dimensions.mobileMax}) {
     flex-direction: column;
     align-items: center;
   }

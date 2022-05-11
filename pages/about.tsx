@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import profilePicture from "../public/profile-pic.webp";
+import profilePicture from "../public/img/profile-pic.webp";
 import { AboutHero, BioDescription, HeroHello } from "../styles/about.styles";
 import { Description, TitleH1 } from "../styles/common.styles";
 import { NvContainerFixedWide } from "../styles/containers.styles";
