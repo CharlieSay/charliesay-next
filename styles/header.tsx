@@ -11,7 +11,6 @@ import {
   HamburgerMenuSection,
   MobileMenuOverlay,
   MobileMenuOverlayContent,
-  HamburgerMenuPadding,
   ThemeSwitchContainer,
 } from "./header.styles";
 import { RoughNotation } from "react-rough-notation";
@@ -58,17 +57,6 @@ const WebHeader = (props: HeaderPropsAsClass) => {
           {showNav && (
             <MobileMenuOverlay>
               <MobileMenuOverlayContent>
-                <HamburgerMenuPadding>
-                  <HamburgerMenu
-                    isOpen={showNav}
-                    menuClicked={() => setShowNav(!showNav)}
-                    width={22}
-                    height={15}
-                    strokeWidth={3}
-                    rotate={0}
-                    color={isLightMode ? "#faae2b" : "#fffffe"}
-                  />
-                </HamburgerMenuPadding>
                 {headerLinks.map((link) => (
                   <ULLI mobileNav={true} key={link.name}>
                     <HeaderLinkA href={link.href}>{link.name}</HeaderLinkA>

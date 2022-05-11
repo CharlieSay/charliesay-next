@@ -35,12 +35,12 @@ export const HamburgerMenuSection = styled.section`
 `;
 
 export const MobileMenuOverlay = styled.nav`
-  height: 100%;
+  height: 90%;
   width: 100%;
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
-  top: 0;
+  top: 10%;
   background-color: ${(props) =>
     props.theme.elements.background}; /* Black fallback color */
   overflow-x: hidden; /* Disable horizontal scroll */
@@ -55,12 +55,6 @@ export const MobileMenuOverlayContent = styled.section`
   height: 100%;
   display: flex;
   flex-direction: column;
-`;
-
-export const HamburgerMenuPadding = styled.section`
-  justify-content: center;
-  display: flex;
-  padding-bottom: 32px;
 `;
 
 export const ULLI = styled.li<{ mobileNav: boolean }>`
