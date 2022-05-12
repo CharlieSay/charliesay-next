@@ -180,6 +180,10 @@ export const LI = styled.li`
 
 export const ALink = styled(HeaderLinkA)`
   margin: 0;
+  & :hover {
+    color: ${(props) => props.theme.illustration.secondary};
+    font-weight: 500;
+  }
 `;
 
 export const RightMarginEight = styled.section`

@@ -3,37 +3,37 @@
     "sectionTitle": "Productivity",
     "items": [
       {
-        "item": "Notion",
+        "itemName": "Notion",
         "optionalCopy": "For all my note taking",
         "href": "https://www.notion.so/"
       },
       {
-        "item": "Slack",
+        "itemName": "Slack",
         "optionalCopy": "Comms 🎧",
         "href": "https://www.slack.com/"
       },
       {
-        "item": "ToDoist",
+        "itemName": "ToDoist",
         "optionalCopy": "Tasks tasks tasks",
         "href": "https://todoist.com/"
       },
       {
-        "item": "Magnet",
+        "itemName": "Magnet",
         "optionalCopy": "Window management for Mac. GAME. CHANGER.",
         "href": "https://magnet.crowdcafe.com/"
       },
       {
-        "item": "Vanilla",
+        "itemName": "Vanilla",
         "optionalCopy": "Cleans up a cluttered menu bar",
         "href": "https://matthewpalmer.net/vanilla/"
       },
       {
-        "item": "Alfred",
+        "itemName": "Alfred",
         "optionalCopy": "Honestly changed how I use my mac.",
         "href": "https://www.alfredapp.com/"
       },
       {
-        "item": "1Password",
+        "itemName": "1Password",
         "optionalCopy": "Not free like other Password managers, but the premium is worth it.",
         "href": "https://1password.com/"
       }
@@ -43,54 +43,34 @@
     "sectionTitle": "Editors & Development",
     "items": [
       {
-        "item": "IntelliJ Ultimate",
+        "itemName": "IntelliJ Ultimate",
         "optionalCopy": "Java & Kotlin IDE",
         "href": "https://www.jetbrains.com/idea/"
       },
       {
-        "item": "Visual Studio Code",
+        "itemName": "Visual Studio Code",
         "optionalCopy": "For literally anything that isn't Java or Kotlin",
         "href": "https://code.visualstudio.com/"
       },
       {
-        "item": "Sublime Text",
+        "itemName": "Sublime Text",
         "optionalCopy": "Fancy text editor, but is great.",
         "href": "https://www.sublimetext.com/"
       },
       {
-        "item": "Hyper",
+        "itemName": "Hyper",
         "optionalCopy": "My go to Terminal",
         "href": "https://hyper.is/"
       },
       {
-        "item": "OhMyZsh (& Zsh)",
+        "itemName": "OhMyZsh (& Zsh)",
         "optionalCopy": "ZSH-Shell gang",
         "href": "https://ohmyz.sh/"
       },
       {
-        "item": "Hoppscotch",
+        "itemName": "Hoppscotch",
         "optionalCopy": "For navigating REST",
         "href": "https://hoppscotch.io/"
-      }
-    ]
-  },
-  {
-    "sectionTitle": "Design",
-    "items": [
-      {
-        "item": "Figma",
-        "optionalCopy": "Figma is just a well-rounded design tool.",
-        "href": "https://www.figma.com/"
-      },
-      {
-        "item": "Adobe Suite",
-        "optionalCopy": "If I need to make small edits I use the suite",
-        "href": "https://www.adobe.com/uk/creativecloud.html"
-      },
-      {
-        "item": "HappyHues",
-        "optionalCopy": "Colour palletes galore!",
-        "href": "https://www.happyhues.co/"
       }
     ]
   },
@@ -98,16 +78,38 @@
     "sectionTitle": "Gadgets & Tech",
     "items": [
       {
-        "item": "Work Mac (Macbook 15' 2017 2.9Ghz i7)",
+        "itemName": "Work Mac",
+        "optionalCopy": "",
         "href": "https://www.apple.com/uk/"
       },
       {
-        "item": "Personal Mac",
+        "itemName": "Personal Mac",
+        "optionalCopy": "15inch, 2018, 2.2ghz i7 model",
         "href": "https://www.apple.com/uk/"
       },
       {
-        "item": "iPhone 12 Pro Max (256GB)",
+        "itemName": "iPhone 12 Pro Max (256GB)",
         "href": "https://www.apple.com/uk/"
+      }
+    ]
+  },
+  {
+    "sectionTitle": "Design",
+    "items": [
+      {
+        "itemName": "Figma",
+        "optionalCopy": "Figma is just a well-rounded design tool.",
+        "href": "https://www.figma.com/"
+      },
+      {
+        "itemName": "Adobe Suite",
+        "optionalCopy": "If I need to make small edits I use the suite",
+        "href": "https://www.adobe.com/uk/creativecloud.html"
+      },
+      {
+        "itemName": "HappyHues",
+        "optionalCopy": "Colour palletes galore!",
+        "href": "https://www.happyhues.co/"
       }
     ]
   },
@@ -115,39 +117,40 @@
     "sectionTitle": "My Desk Setup",
     "items": [
       {
-        "item": "Flexispot Standing Desk Frame EC5",
+        "itemName": "Flexispot Standing Desk Frame EC5",
         "href": "https://flexispot.co.uk/3-stage-desk-frame-e5.html"
       },
       {
-        "item": "LG 27UL650 (times 2)",
+        "itemName": "LG 27UL650 (times 2)",
         "href": "https://www.lg.com/uk/monitors/lg-27UL650"
       },
       {
-        "item": "Razer Mamba Elite",
+        "itemName": "Razer Mamba Elite",
         "href": "https://www.razer.com/gaming-mice/razer-mamba-elite/RZ01-02560100-R3M1"
       },
       {
-        "item": "Keychron K3",
+        "itemName": "Keychron K3",
         "href": "https://www.keychron.uk/products/keychron-k3-ultra-slim-wireless-mechanical-keyboard-uk-iso-layout-version-2"
       },
       {
-        "item": "Blue Yeti",
+        "itemName": "Blue Yeti",
         "href": "https://www.bluemic.com/en-gb/products/yeti/"
       },
       {
-        "item": "HyperX HX-MPFS-XL Fury S Pro",
+        "itemName": "HyperX HX-MPFS-XL Fury S Pro",
         "href": "https://www.amazon.co.uk/HyperX-FURY-Pro-Gaming-Mouse/dp/B0716ZHGKT?th=1"
       },
       {
-        "item": "Logitech C920",
+        "itemName": "Logitech C920",
+        "optionalCopy": "Gonna switch it soon though",
         "href": "https://www.amazon.co.uk/dp/B07QZZS7S1?ref=nb_sb_ss_w_as-reorder-t2_ypp_rep_k0_1_16&amp;crid=2090WZ1ZCBX9X&amp;sprefix=logitech+webcam"
       },
       {
-        "item": "HAUEA Microphone Arm Stand",
+        "itemName": "HAUEA Microphone Arm Stand",
         "href": "https://www.amazon.co.uk/gp/product/B073VJKD9Q/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1"
       },
       {
-        "item": "Bontec Dual MOniutor Stand",
+        "itemName": "Bontec Dual Monitor Stand",
         "href": "https://www.amazon.co.uk/gp/product/B01MR397OH/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1"
       }
     ]

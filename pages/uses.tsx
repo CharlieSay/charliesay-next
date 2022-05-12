@@ -35,18 +35,18 @@ const Uses: NextPage = () => {
           <TitleH2>{section.sectionTitle}</TitleH2>
           <UL>
             {section.items.map((item) => (
-              <LI key={item.item}>
+              <LI key={item.itemName}>
                 <RightMarginEight>
                   <Image
                     src={`https://s2.googleusercontent.com/s2/favicons?domain_url=${item.href}`}
-                    alt={`Icon of ${item.item}`}
+                    alt={`Icon of ${item.itemName}`}
                     layout={"fixed"}
                     width={20}
                     height={20}
                   />
                 </RightMarginEight>
                 <ALink href={item.href} target="_blank">
-                  <Copy style={{ margin: "0" }}>{item.item}</Copy>
+                  <Copy style={{ margin: "0" }}>{item.itemName}</Copy>
                   {item.optionalCopy && (
                     <CopyLite style={{ margin: "0" }}>
                       {item.optionalCopy}
