@@ -53,7 +53,7 @@ export const ULLI = styled.li<{ mobileNav: boolean }>`
   @media (max-width: ${(props) => props.theme.dimensions.mobileMax}) {
     display: ${(props) => (props.mobileNav ? "inline" : "none")};
     flex-direction: column;
-    height: 100%;
+    height: 5em;
   }
 `;
 
@@ -68,6 +68,9 @@ export const HeaderLinkA = styled.a`
   font-weight: 700;
   &:hover {
     color: ${(props) => props.theme.elements.paragraph};
+  }
+  @media (max-width: ${(props) => props.theme.dimensions.mobileMax}) {
+    margin: 0;
   }
 `;
 
