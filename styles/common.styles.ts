@@ -20,16 +20,6 @@ export const Main = styled.main`
   align-items: center;
 `;
 
-export const Footer = styled.footer`
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  justify-content: center;
-  align-items: center;
-  background-color: ${(props) => props.theme.elements.background};
-  flex-direction: column;
-`;
-
 export const TitleH1 = styled.h1`
   text-decoration: none;
   margin-bottom: 1rem;

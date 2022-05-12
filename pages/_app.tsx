@@ -2,9 +2,9 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import Script from "next/script";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import WebHeader from "../components/header";
+import Header from "../components/header";
+import Footer from "../components/footer";
 import header from "../data/nav-data.json";
-import { ALink, CopyLite, Footer } from "../styles/common.styles";
 import {
   BackgroundColour,
   ContainerConstrained,
@@ -68,7 +68,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             href={theme === "light" ? "/favicon.ico" : "/favicon-dark.ico"}
           />
         </Head>
-        <WebHeader
+        <Header
           isLightMode={theme === "light" ? true : false}
           // @ts-ignore
           themeSwitchHook={themeToggler}
@@ -79,10 +79,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Component {...pageProps} />
           </ContainerConstrained>
         </BackgroundColour>
-        <Footer>
-          <ALink href="https://nextjs.org/">Powered by Next JS</ALink>
-          <CopyLite> Oh and lots of coffee ☕</CopyLite>
-        </Footer>
+        <Footer />
       </ThemeProvider>
       <Script
         async

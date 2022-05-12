@@ -5,7 +5,7 @@ import { RoughNotation } from "react-rough-notation";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import {
   HamburgerMenuSection,
-  Header,
+  HeaderElement,
   HeaderGroup,
   HeaderLinkA,
   LogoStyle,
@@ -17,12 +17,12 @@ import {
   ULLI,
 } from "../styles/header.styles";
 
-const WebHeader = (props: HeaderPropsAsClass) => {
+const Header = (props: HeaderPropsAsClass) => {
   const { headerLinks, themeSwitchHook, isLightMode } = props;
   const [showNav, setShowNav] = useState(false);
 
   return (
-    <Header>
+    <HeaderElement>
       <NavWrapper>
         <HeaderGroup>
           <RoughNotation color={"#faae2b"} type="underline" show={true}>
@@ -32,7 +32,7 @@ const WebHeader = (props: HeaderPropsAsClass) => {
             {headerLinks.map((link) => (
               <ULLI mobileNav={false} key={link.name}>
                 {!link.external && (
-                  <Link href={link.href} passHref={link.external}>
+                  <Link href={link.href} passHref={true}>
                     <HeaderLinkA>{link.name}</HeaderLinkA>
                   </Link>
                 )}
@@ -76,7 +76,7 @@ const WebHeader = (props: HeaderPropsAsClass) => {
           </ThemeSwitchContainer>
         </HeaderGroup>
       </NavWrapper>
-    </Header>
+    </HeaderElement>
   );
 };
 
@@ -93,4 +93,4 @@ interface HeaderLink {
   isActive?: boolean;
 }
 
-export default WebHeader;
+export default Header;

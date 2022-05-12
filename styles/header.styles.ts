@@ -91,6 +91,6 @@ export const UL = styled.ul`
   }
 `;
 
-export const Header = styled.header`
+export const HeaderElement = styled.header`
   background-color: ${(props) => props.theme.elements.background};
 `;
