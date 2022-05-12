@@ -1,16 +1,16 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import Script from "next/script";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
+import WebHeader from "../components/header";
 import header from "../data/nav-data.json";
 import { ALink, CopyLite, Footer } from "../styles/common.styles";
 import {
   BackgroundColour,
   ContainerConstrained,
 } from "../styles/containers.styles";
-import WebHeader from "../components/header";
 import { darkTheme, lightTheme, ThemeType } from "../styles/theme.styles";
 import { useDarkMode } from "../utils/theme";
-import Script from "next/script";
 
 const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   @font-face {
@@ -29,7 +29,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     line-height: 1.15;
     transition: all 0.25s linear;
     & ::selection {
-    background: ${(props) => props.theme.illustration.secondary};
+      background: ${(props) => props.theme.illustration.secondary};
     }
   }
 

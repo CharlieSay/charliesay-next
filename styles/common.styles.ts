@@ -164,12 +164,14 @@ export const TwitterFeedPadding = styled.section`
 `;
 
 export const UL = styled.ul`
+  color: inherit;
   display: block;
   padding: 0;
 `;
 
 export const LI = styled.li`
   list-style: none;
+  color: ${(props) => props.theme.elements.paragraph};
   display: flex;
   margin: 0;
   img {
