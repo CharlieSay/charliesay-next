@@ -21,6 +21,6 @@ export const BioDescription = styled(Description)`
 
   span {
     font-weight: 600;
-    color: ${(props) => props.theme.illustration.stroke};
+    color: ${(props) => props.theme.illustration.secondary};
   }
 `;
