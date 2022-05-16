@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import UsesSetup from "../public/img/setup.webp";
 import usesData from "../data/uses.json";
 import {
   ALink,
@@ -17,6 +18,11 @@ const Uses: NextPage = () => {
   return (
     <NvContainerFixedWide>
       <TitleH1>Uses</TitleH1>
+      <Image
+        src={UsesSetup}
+        alt={"the setup, featuring two monitors, keyboard mouse, mac and more."}
+        layout={"intrinsic"}
+      />
       <Copy>
         This may be out of date, but you can always find out what loads of other
         developers use over at
