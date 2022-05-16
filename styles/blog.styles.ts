@@ -29,8 +29,7 @@ export const BlogPost = styled.section`
   padding: 20px 25px 20px 25px;
   border: 2px solid ${(props) => props.theme.illustration.secondary};
   background-color: ${(props) => props.theme.illustration.stroke};
-  box-shadow: 0 10px 34px 0
-    (${(props) => props.theme.illustration.secondary} / 35%);
+  box-shadow: 0px 0px 10px 1px ${(props) => props.theme.special.glow};
   margin: 0 !important;
   display: grid;
   grid-template-columns: 1fr;

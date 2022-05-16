@@ -24,7 +24,7 @@ const Blog = (posts: any): JSX.Element => {
             <BlogPost>
               <CardFooter>
                 <DateTag>
-                  {moment(post.published_timestamp, 'DD MM, YYYY').toString()}
+                  {moment(post.published_timestamp).utc().format("DD MMM 'YY")}
                 </DateTag>
                 <TagsGroup>
                   {post.tag_list.map((tag) => (
