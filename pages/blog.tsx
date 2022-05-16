@@ -1,72 +1,62 @@
-import fs from "fs";
-import matter from "gray-matter";
-import path from "path";
-import { Copy, TitleH1 } from "../styles/common.styles";
-import { NvContainerFixedWide } from "../styles/containers.styles";
+import { getBlogPosts } from '../lib/dev-to-api'
+import { TitleH1 } from '../styles/common.styles'
+import { NvContainerFixedWide } from '../styles/containers.styles'
+import {
+  BlogPostGrid,
+  BlogPost,
+  CardTitle,
+  CardFooter,
+  Tag,
+  TagsGroup,
+  DateTag,
+  ReadingTime,
+} from '../styles/blog.styles'
+import Link from 'next/link'
+import moment from 'moment'
 
-const Home = ({ posts }: any): JSX.Element => {
+const Blog = (posts: any): JSX.Element => {
   return (
     <NvContainerFixedWide>
-      <TitleH1>Blog</TitleH1>
-      <Copy>Under construction 🚧</Copy>
-      {/* {posts.map(
-          (post: any, index: Key | null | undefined): JSX.Element => (
-            <Link href={"/blog/" + post.slug} passHref key={index}>
-              <div className="card mb-3 pointer" style={{ maxWidth: "540px" }}>
-                <div className="row g-0">
-                  <div className="col-md-8">
-                    <div className="card-body">
-                      <h5 className="card-title">{post.frontMatter.title}</h5>
-                      <p className="card-text">
-                        {post.frontMatter.description}
-                      </p>
-                      <p className="card-text">
-                        <small className="text-muted">
-                          {post.frontMatter.date}
-                        </small>
-                      </p>
-                    </div>
-                  </div>
-                  {/* <div className="col-md-4 m-auto">
-                    <Image
-                      src={post.frontMatter.thumbnailUrl}
-                      className="img-fluid mt-1 rounded-start"
-                      alt="thumbnail"
-                      width={500}
-                      height={400}
-                      objectFit="cover"
-                    />
-                  </div> */}
-      {/* </div>
-              </div>
-            </Link>
-          )
-        )} */}
+      <TitleH1>Blog Posts</TitleH1>
+      <BlogPostGrid>
+        {posts.posts.props.post.map((post: DevToPost) => (
+          <Link key={post.id} href={post.url} passHref={true}>
+            <BlogPost>
+              <CardFooter>
+                <DateTag>
+                  {moment(post.published_timestamp, 'DD MM, YYYY').toString()}
+                </DateTag>
+                <TagsGroup>
+                  {post.tag_list.map((tag) => (
+                    <Tag key={tag}>{tag}</Tag>
+                  ))}
+                </TagsGroup>
+              </CardFooter>
+              <CardTitle>{post.title}</CardTitle>
+              <ReadingTime>
+                Takes {post.reading_time_minutes} minute
+                {post.reading_time_minutes === 1 ? '' : 's'} to read
+              </ReadingTime>
+            </BlogPost>
+          </Link>
+        ))}
+      </BlogPostGrid>
     </NvContainerFixedWide>
-  );
-};
+  )
+}
 
-export const getStaticProps = async () => {
-  const files = fs.readdirSync(path.join("posts"));
+interface DevToPost {
+  title: string
+  id: number
+  url: string
+  published_timestamp: string
+  tag_list: string[]
+  reading_time_minutes: number
+}
 
-  const posts = files.map((filename) => {
-    const markdownWithMeta = fs.readFileSync(
-      path.join("posts", filename),
-      "utf-8"
-    );
-    const { data: frontMatter } = matter(markdownWithMeta);
+Blog.getInitialProps = async ({}) => {
+  const res = await getBlogPosts()
+  return { posts: res }
+}
 
-    return {
-      frontMatter,
-      slug: filename.split(".")[0],
-    };
-  });
-
-  return {
-    props: {
-      posts,
-    },
-  };
-};
-
-export default Home;
+export default Blog
