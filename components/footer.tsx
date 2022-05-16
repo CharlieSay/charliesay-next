@@ -1,7 +1,8 @@
-import Link from "next/link";
-import React from "react";
-import { ALink, CopyLite, Grid } from "../styles/common.styles";
-import { Footer, LegalCopy } from "../styles/footer.styles";
+import Link from 'next/link'
+import React from 'react'
+import { ALink, CopyLite, Grid } from '../styles/common.styles'
+import { Footer, LegalCopy } from '../styles/footer.styles'
+import { SocialIcons } from './social-icons'
 
 const FooterComponent = () => {
   return (
@@ -15,9 +16,10 @@ const FooterComponent = () => {
         <Link href="/privacy-policy" passHref={true}>
           <LegalCopy>Privacy Policy</LegalCopy>
         </Link>
+        <SocialIcons />
       </Grid>
     </Footer>
-  );
-};
+  )
+}
 
-export default FooterComponent;
+export default FooterComponent

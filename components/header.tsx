@@ -1,8 +1,8 @@
-import Link from "next/link";
-import React, { useState } from "react";
-import HamburgerMenu from "react-hamburger-menu";
-import { RoughNotation } from "react-rough-notation";
-import { DarkModeSwitch } from "react-toggle-dark-mode";
+import Link from 'next/link'
+import React, { useState } from 'react'
+import HamburgerMenu from 'react-hamburger-menu'
+import { RoughNotation } from 'react-rough-notation'
+import { DarkModeSwitch } from 'react-toggle-dark-mode'
 import {
   HamburgerMenuSection,
   HeaderElement,
@@ -15,17 +15,18 @@ import {
   ThemeSwitchContainer,
   UL,
   ULLI,
-} from "../styles/header.styles";
+} from '../styles/header.styles'
+import { SocialIcons } from './social-icons'
 
 const Header = (props: HeaderPropsAsClass) => {
-  const { headerLinks, themeSwitchHook, isLightMode } = props;
-  const [showNav, setShowNav] = useState(false);
+  const { headerLinks, themeSwitchHook, isLightMode } = props
+  const [showNav, setShowNav] = useState(false)
 
   return (
     <HeaderElement>
       <NavWrapper>
         <HeaderGroup>
-          <RoughNotation color={"#faae2b"} type="underline" show={true}>
+          <RoughNotation color={'#faae2b'} type="underline" show={true}>
             <LogoStyle href="/">CharlieSay</LogoStyle>
           </RoughNotation>
           <UL>
@@ -50,7 +51,7 @@ const Header = (props: HeaderPropsAsClass) => {
               height={15}
               strokeWidth={2}
               rotate={0}
-              color={isLightMode ? "#faae2b" : "#fffffe"}
+              color={isLightMode ? '#faae2b' : '#fffffe'}
               animationDuration={0.5}
             />
           </HamburgerMenuSection>
@@ -62,6 +63,7 @@ const Header = (props: HeaderPropsAsClass) => {
                     <HeaderLinkA href={link.href}>{link.name}</HeaderLinkA>
                   </ULLI>
                 ))}
+                <SocialIcons />
               </MobileMenuOverlayContent>
             </MobileMenuOverlay>
           )}
@@ -70,27 +72,27 @@ const Header = (props: HeaderPropsAsClass) => {
               checked={isLightMode}
               onChange={() => themeSwitchHook()}
               size={30}
-              moonColor={"#00473e"}
-              sunColor={"#fffffe"}
+              moonColor={'#00473e'}
+              sunColor={'#fffffe'}
             />
           </ThemeSwitchContainer>
         </HeaderGroup>
       </NavWrapper>
     </HeaderElement>
-  );
-};
+  )
+}
 
 interface HeaderPropsAsClass {
-  headerLinks: Array<HeaderLink>;
-  themeSwitchHook: () => void;
-  isLightMode: boolean;
+  headerLinks: Array<HeaderLink>
+  themeSwitchHook: () => void
+  isLightMode: boolean
 }
 
 interface HeaderLink {
-  name: string;
-  href: string;
-  external?: boolean;
-  isActive?: boolean;
+  name: string
+  href: string
+  external?: boolean
+  isActive?: boolean
 }
 
-export default Header;
+export default Header
