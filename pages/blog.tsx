@@ -1,18 +1,21 @@
+import moment from 'moment'
+import Image from 'next/image'
+import Link from 'next/link'
 import { getBlogPosts } from '../lib/dev-to-api'
-import { TitleH1 } from '../styles/common.styles'
-import { NvContainerFixedWide } from '../styles/containers.styles'
+import Like from '../public/img/like.svg'
 import {
-  BlogPostGrid,
   BlogPost,
-  CardTitle,
+  BlogPostGrid,
   CardFooter,
-  Tag,
-  TagsGroup,
+  CardHeader,
+  CardTitle,
   DateTag,
   ReadingTime,
+  Tag,
+  TagsGroup,
 } from '../styles/blog.styles'
-import Link from 'next/link'
-import moment from 'moment'
+import { FillSvg, TitleH1 } from '../styles/common.styles'
+import { NvContainerFixedWide } from '../styles/containers.styles'
 
 const Blog = (posts: any): JSX.Element => {
   return (
@@ -22,21 +25,26 @@ const Blog = (posts: any): JSX.Element => {
         {posts.posts.props.post.map((post: DevToPost) => (
           <Link key={post.id} href={post.url} passHref={true}>
             <BlogPost>
-              <CardFooter>
+              <CardHeader>
                 <DateTag>
-                  {moment(post.published_timestamp).utc().format("DD MMM 'YY")}
+                  {moment(post.published_timestamp)
+                    .utc()
+                    .format("DD MMM 'YY")
+                    .toUpperCase()}
                 </DateTag>
                 <TagsGroup>
                   {post.tag_list.map((tag) => (
-                    <Tag key={tag}>{tag}</Tag>
+                    <Tag key={tag}>{tag.toUpperCase()}</Tag>
                   ))}
                 </TagsGroup>
-              </CardFooter>
+              </CardHeader>
               <CardTitle>{post.title}</CardTitle>
-              <ReadingTime>
-                Takes {post.reading_time_minutes} minute
-                {post.reading_time_minutes === 1 ? '' : 's'} to read
-              </ReadingTime>
+              <CardFooter>
+                <ReadingTime>
+                  Takes {post.reading_time_minutes} minute
+                  {post.reading_time_minutes === 1 ? '' : 's'} to read
+                </ReadingTime>
+              </CardFooter>
             </BlogPost>
           </Link>
         ))}
@@ -52,6 +60,7 @@ interface DevToPost {
   published_timestamp: string
   tag_list: string[]
   reading_time_minutes: number
+  positive_reactions_count: number
 }
 
 Blog.getInitialProps = async ({}) => {
