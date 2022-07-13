@@ -9,22 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mdx-js/loader": "^1.6.22",
-    "@next/mdx": "^11.0.1",
-    "gray-matter": "^4.0.3",
     "moment": "^2.29.3",
     "next": "12.1.5",
     "next-compose-plugins": "^2.2.1",
-    "next-mdx-remote": "^3.0.4",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-hamburger-menu": "^1.2.1",
-    "react-loading-skeleton": "^3.1.0",
-    "react-query": "^3.39.0",
     "react-rough-notation": "^1.0.2",
     "react-syntax-highlighter": "^15.4.4",
     "react-toggle-dark-mode": "^1.0.4",
-    "react-twitter-embed": "^4.0.4",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {

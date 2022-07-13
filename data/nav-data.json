@@ -2,19 +2,12 @@
   {
     "name": "About",
     "href": "/about",
-    "copy": "Handy how-to's in the big dev world",
-    "external": false
+    "copy": "Handy how-to's in the big dev world"
   },
   {
     "name": "Uses",
     "href": "/uses",
     "copy": "What theme, what font, what settings?!"
-  },
-  {
-    "name": "Snippets",
-    "href": "//twitter.com/charliesay_",
-    "copy": "Handy little snippets for you to pop into your projects",
-    "external": true
   },
   {
     "name": "Blog",

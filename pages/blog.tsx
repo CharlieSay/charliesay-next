@@ -1,8 +1,6 @@
 import moment from 'moment'
-import Image from 'next/image'
 import Link from 'next/link'
 import { getBlogPosts } from '../lib/dev-to-api'
-import Like from '../public/img/like.svg'
 import {
   BlogPost,
   BlogPostGrid,
@@ -14,7 +12,7 @@ import {
   Tag,
   TagsGroup,
 } from '../styles/blog.styles'
-import { FillSvg, TitleH1 } from '../styles/common.styles'
+import { TitleH1 } from '../styles/common.styles'
 import { NvContainerFixedWide } from '../styles/containers.styles'
 
 const Blog = (posts: any): JSX.Element => {
