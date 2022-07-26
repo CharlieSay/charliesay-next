@@ -14,7 +14,7 @@ import {
   TagsGroup,
 } from '../styles/blog.styles'
 import { TitleH1 } from '../styles/common.styles'
-import { NvContainerFixedWide } from '../styles/containers.styles'
+import { ContainerFixedWide } from '../styles/containers.styles'
 
 interface DevToPost {
   title: string
@@ -34,7 +34,7 @@ export const getStaticProps: GetStaticProps = async () => {
 const Blog = (props: { posts: DevToPost[] }): JSX.Element => {
   const { posts } = props
   return (
-    <NvContainerFixedWide>
+    <ContainerFixedWide>
       <TitleH1>Blog Posts</TitleH1>
       <BlogPostGrid>
         {posts.map((post: DevToPost) => (
@@ -64,7 +64,7 @@ const Blog = (props: { posts: DevToPost[] }): JSX.Element => {
           </Link>
         ))}
       </BlogPostGrid>
-    </NvContainerFixedWide>
+    </ContainerFixedWide>
   )
 }
 

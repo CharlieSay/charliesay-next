@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { NextPage } from 'next'
 import {
   ALink,
   CopyLite,
@@ -6,12 +6,12 @@ import {
   TitleH1,
   TitleH2,
   UL,
-} from "../styles/common.styles";
-import { NvContainerFixedWide } from "../styles/containers.styles";
+} from '../styles/common.styles'
+import { ContainerFixedWide } from '../styles/containers.styles'
 
 const Terms: NextPage = () => {
   return (
-    <NvContainerFixedWide>
+    <ContainerFixedWide>
       <TitleH1>Terms and Conditions</TitleH1>
 
       <CopyLite>Welcome to CharlieSay!</CopyLite>
@@ -80,7 +80,7 @@ const Terms: NextPage = () => {
 
       <CopyLite>
         This Agreement shall begin on the date hereof. Our Terms and Conditions
-        were created with the help of the{" "}
+        were created with the help of the{' '}
         <ALink href="https://www.privacypolicies.com/blog/sample-terms-conditions-template/">
           Terms And Conditions Template
         </ALink>
@@ -314,8 +314,8 @@ const Terms: NextPage = () => {
         are provided free of charge, we will not be liable for any loss or
         damage of any nature.
       </CopyLite>
-    </NvContainerFixedWide>
-  );
-};
+    </ContainerFixedWide>
+  )
+}
 
-export default Terms;
+export default Terms

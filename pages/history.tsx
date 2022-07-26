@@ -1,5 +1,5 @@
-import type { NextPage } from "next";
-import workHistory from "../data/work-history.json";
+import type { NextPage } from 'next'
+import workHistory from '../data/work-history.json'
 import {
   ALink,
   Copy,
@@ -9,8 +9,8 @@ import {
   PillSection,
   TitleH1,
   TitleH2,
-} from "../styles/common.styles";
-import { NvContainerFixedWide } from "../styles/containers.styles";
+} from '../styles/common.styles'
+import { ContainerFixedWide } from '../styles/containers.styles'
 import {
   ExperienceHeroSection,
   ExperienceList,
@@ -18,11 +18,11 @@ import {
   ExperienceSection,
   HistoryExperienceLI,
   HistoryExperienceUL,
-} from "../styles/history.styles";
+} from '../styles/history.styles'
 
 const History: NextPage = () => {
   return (
-    <NvContainerFixedWide>
+    <ContainerFixedWide>
       <TitleH1>History</TitleH1>
       <ExperienceList>
         {workHistory.map((experience) => (
@@ -58,8 +58,8 @@ const History: NextPage = () => {
           </ExperienceSection>
         ))}
       </ExperienceList>
-    </NvContainerFixedWide>
-  );
-};
+    </ContainerFixedWide>
+  )
+}
 
-export default History;
+export default History

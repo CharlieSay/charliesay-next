@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { NextPage } from 'next'
 import {
   CopyLite,
   LI,
@@ -6,12 +6,12 @@ import {
   TitleH1,
   TitleH2,
   ALink,
-} from "../styles/common.styles";
-import { NvContainerFixedWide } from "../styles/containers.styles";
+} from '../styles/common.styles'
+import { ContainerFixedWide } from '../styles/containers.styles'
 
 const PrivacyPolicy: NextPage = () => {
   return (
-    <NvContainerFixedWide>
+    <ContainerFixedWide>
       <TitleH1>Privacy Policy for CharlieSay</TitleH1>
       <CopyLite>
         At CharlieSay, accessible from charliesay.xyz, one of our main
@@ -23,7 +23,7 @@ const PrivacyPolicy: NextPage = () => {
       <CopyLite>
         If you have additional questions or require more information about our
         Privacy Policy, do not hesitate to contact us. Our Privacy Policy was
-        generated with the help of{" "}
+        generated with the help of{' '}
         <ALink href="https://www.gdprprivacynotice.com/">
           GDPR Privacy Policy Generator from GDPRPrivacyNotice.com
         </ALink>
@@ -162,8 +162,8 @@ const PrivacyPolicy: NextPage = () => {
         By using our website, you hereby consent to our Privacy Policy and agree
         to its terms.
       </CopyLite>
-    </NvContainerFixedWide>
-  );
-};
+    </ContainerFixedWide>
+  )
+}
 
-export default PrivacyPolicy;
+export default PrivacyPolicy
