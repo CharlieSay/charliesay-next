@@ -1,4 +1,5 @@
 import moment from 'moment'
+import { GetStaticProps } from 'next'
 import Link from 'next/link'
 import { getBlogPosts } from '../lib/dev-to-api'
 import {
@@ -15,12 +16,28 @@ import {
 import { TitleH1 } from '../styles/common.styles'
 import { NvContainerFixedWide } from '../styles/containers.styles'
 
-const Blog = (posts: any): JSX.Element => {
+interface DevToPost {
+  title: string
+  id: number
+  url: string
+  published_timestamp: string
+  tag_list: string[]
+  reading_time_minutes: number
+  positive_reactions_count: number
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const res = await getBlogPosts()
+  return { props: { posts: res || [] } }
+}
+
+const Blog = (props: { posts: DevToPost[] }): JSX.Element => {
+  const { posts } = props
   return (
     <NvContainerFixedWide>
       <TitleH1>Blog Posts</TitleH1>
       <BlogPostGrid>
-        {posts.posts.props.post.map((post: DevToPost) => (
+        {posts.map((post: DevToPost) => (
           <Link key={post.id} href={post.url} passHref={true}>
             <BlogPost>
               <CardHeader>
@@ -49,21 +66,6 @@ const Blog = (posts: any): JSX.Element => {
       </BlogPostGrid>
     </NvContainerFixedWide>
   )
-}
-
-interface DevToPost {
-  title: string
-  id: number
-  url: string
-  published_timestamp: string
-  tag_list: string[]
-  reading_time_minutes: number
-  positive_reactions_count: number
-}
-
-Blog.getInitialProps = async ({}) => {
-  const res = await getBlogPosts()
-  return { posts: res }
 }
 
 export default Blog

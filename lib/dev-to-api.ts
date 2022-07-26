@@ -8,5 +8,5 @@ export const getBlogPosts = async () => {
     console.error(json.errors)
     throw new Error('Failed to fetch API')
   }
-  return { props: { post: json } }
+  return json
 }
