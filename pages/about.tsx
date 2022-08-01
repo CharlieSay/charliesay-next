@@ -1,3 +1,4 @@
+import moment from 'moment'
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import profilePicture from '../public/img/profile-pic.webp'
@@ -6,6 +7,9 @@ import { Description, TitleH1 } from '../styles/common.styles'
 import { ContainerFixedWide } from '../styles/containers.styles'
 
 const About: NextPage = () => {
+  const currentAge = moment('19960824', 'YYYYMMDD').fromNow(true)
+  const developerFor = moment('20170901', 'YYYYMMDD')
+
   return (
     <ContainerFixedWide>
       <TitleH1>About</TitleH1>
@@ -24,10 +28,12 @@ const About: NextPage = () => {
         </HeroHello>
       </AboutHero>
       <BioDescription>
-        I&apos;m a 25 years old full-stack developer from <span>MCR, UK</span>{' '}
-        🐝
+        I&apos;m a {currentAge.substring(0, currentAge.length - 1)} old
+        full-stack developer from <span>MCR, UK</span> 🐝
         <br />
-        and have been a developer since September 2017! (5 Years 😲)
+        and have been a developer since September 2017! (
+        {developerFor.fromNow()} thats {moment().diff(developerFor, 'minutes')}{' '}
+        minutes 😲)
       </BioDescription>
       <BioDescription>
         Software for me started out as an apprentice java dev, but as time went
