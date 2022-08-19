@@ -94,6 +94,41 @@
     ]
   },
   {
+    "sectionTitle": "Language & Frameworks",
+    "items": [
+      {
+        "itemName": "Typescript (& JS)",
+        "optionalCopy": "I think Typescript is just better, so i count both",
+        "href": "https://www.typescriptlang.org/"
+      },
+      {
+        "itemName": "React",
+        "optionalCopy": "My go-to in most corporate settings",
+        "href": "https://reactjs.org/"
+      },
+      {
+        "itemName": "NextJS",
+        "optionalCopy": "My go-to in all side-projects these days, its just so good",
+        "href": "https://nextjs.org/"
+      },
+      {
+        "itemName": "Tailwind",
+        "optionalCopy": "For most side-projects to get up spinning quick",
+        "href": "https://tailwindcss.com/"
+      },
+      {
+        "itemName": "Styled Components",
+        "optionalCopy": "Beautiful, Reusable CSS-IN-JS. ",
+        "href": "https://styled-components.com/"
+      },
+      {
+        "itemName": "Java (& Kotlin)",
+        "optionalCopy": "Java & Kotlin, but prefer Java.",
+        "href": "https://www.java.com/en/"
+      }
+    ]
+  },
+  {
     "sectionTitle": "Design",
     "items": [
       {

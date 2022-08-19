@@ -1,0 +1,20 @@
+[
+    {
+        "title": "New Vision Store",
+        "description": "WorkInProgress - E-Commerce store to equip UK Churches with digital content. GQL, React, Typescript, Contentful CMS, Auth0, NodeJS",
+        "imgLocation": "https://static.otta.com/uploads/images/user-project-images/18111-l-v24E--jCbS9jbfJys1-8gMOppjh6U0fXgSEtnxOLk.jpg",
+        "url": "http://newvisionbeta.talesoft.digital/"
+    },
+    {
+        "title": "Equippr",
+        "description": "Work In Progress - a full stack website that gives aspiring infuencers information (camera equipment, software etc) about current / popular crowd sourced infuencers so they can start their own journey.",
+        "imgLocation": "https://static.otta.com/uploads/images/user-project-images/18112-3-6ugCCEzEuITvbtuYyseVh72XIbYH8tnR3k_e7Hrro.jpg",
+        "url": "http://equippr.talesoft.digital/"
+    },
+    {
+        "title": "100 Projects",
+        "description": "A website devs of all levels, expertise and more can get inspiration for their next project to better their skills as developers. By doing.",
+        "imgLocation": "https://static.otta.com/uploads/images/user-project-images/96996-cblD2LhV__puVyBVAOOOCE3QZLj-jNc_PjwTNMsvi3k.jpg",
+        "url": "http://100projects.dev/"
+    }
+]

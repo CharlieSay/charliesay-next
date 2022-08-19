@@ -9,6 +9,11 @@
     "href": "/uses",
     "copy": "What theme, what font, what settings?!"
   },
+    {
+    "name": "Projects",
+    "href": "/projects",
+    "copy": "Side project gang"
+  },
   {
     "name": "Blog",
     "href": "/blog",

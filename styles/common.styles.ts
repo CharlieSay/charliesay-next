@@ -87,6 +87,11 @@ export const TitleH2 = styled.h2`
   font-size: 2.5rem;
   font-weight: 800;
   color: ${(props) => props.theme.elements.headline};
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 `
 
 export const TitleH3 = styled.h3`
