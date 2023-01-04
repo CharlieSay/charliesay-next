@@ -20,7 +20,6 @@ const Snippets: NextPage = () => {
               <TitleH2>{project.title}</TitleH2>
               <Copy>{project.description}</Copy>
             </section>
-            <img style={{ maxWidth: '300px' }} src={project.imgLocation} />
           </section>
         </Link>
       ))}

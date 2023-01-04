@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/analytics": "^0.1.6",
     "moment": "^2.29.3",
     "next": "12.1.5",
     "next-compose-plugins": "^2.2.1",

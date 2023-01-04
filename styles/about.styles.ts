@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Description } from "./common.styles";
+import styled from 'styled-components'
+import { Description } from './common.styles'
 
 export const AboutHero = styled.section`
   display: flex;
@@ -9,12 +9,12 @@ export const AboutHero = styled.section`
     flex-direction: column;
     align-items: center;
   }
-`;
+`
 
 export const HeroHello = styled.section`
   display: flex;
-  align-items: center;
-`;
+  align-items: start;
+`
 
 export const BioDescription = styled(Description)`
   text-align: start;
@@ -23,4 +23,4 @@ export const BioDescription = styled(Description)`
     font-weight: 600;
     color: ${(props) => props.theme.illustration.secondary};
   }
-`;
+`

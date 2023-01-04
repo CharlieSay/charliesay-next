@@ -107,7 +107,7 @@ export const TitleH2Center = styled(TitleH2)`
 `
 
 export const Description = styled.p`
-  text-align: center;
+  text-align: start;
   font-size: 1.3rem;
   font-weight: 400;
   color: ${(props) => props.theme.elements.paragraph};

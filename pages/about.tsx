@@ -23,11 +23,11 @@ const About: NextPage = () => {
           height={250}
           layout={'intrinsic'}
         />
+      </AboutHero>
+      <BioDescription>
         <HeroHello>
           <Description>👋 I&apos;m Charlie Say</Description>
         </HeroHello>
-      </AboutHero>
-      <BioDescription>
         I&apos;m a {currentAge.substring(0, currentAge.length - 1)} old
         full-stack developer from <span>MCR, UK</span> 🐝
         <br />

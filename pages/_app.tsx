@@ -1,7 +1,6 @@
+import { Analytics } from '@vercel/analytics/react'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import Script from 'next/script'
-import { useState } from 'react'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import Footer from '../components/footer'
 import Header from '../components/header'
@@ -80,22 +79,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           </ContainerConstrained>
         </BackgroundColour>
         <Footer />
+        <Analytics />
       </ThemeProvider>
-      <Script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-TC0MGZCHC7"
-      />
-      <Script
-        id="google-analytics"
-        dangerouslySetInnerHTML={{
-          __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-TC0MGZCHC7', { page_path: window.location.pathname });
-            `,
-        }}
-      />
     </>
   )
 }
